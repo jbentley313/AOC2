@@ -10,4 +10,26 @@
 
 @implementation baseSailplane
 
+//create geter and setter methods for each property
+@synthesize glideRatio, isAerobatic, pricePoint, maxSpeed;
+
+//initialize base sailplane
+-(id)init
+{
+    self = [super init];
+    if (self !=nil)
+    {
+        [self setGlideRatio:0];
+        [self setMaxSpeed:0];
+        [self setIsAerobatic:NO];
+        [self setPricePoint:nil];
+    }
+    return self;
+}
+
+-(void)calculateFlightTime
+{
+    NSLog(@"The flight time is %i", glideRatio);
+}
+
 @end

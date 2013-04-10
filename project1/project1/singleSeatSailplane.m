@@ -10,4 +10,18 @@
 
 @implementation singleSeatSailplane
 
+@synthesize glideRatio, pricePoint;
+
+//customize init
+-(id)init
+{
+    self = [super init];
+    if (self != nil)
+    {
+        [self setGlideRatio:38];
+        [self setPricePoint:(@"low")];
+    }
+    return self;
+};
+
 @end

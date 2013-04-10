@@ -9,5 +9,29 @@
 #import <Foundation/Foundation.h>
 
 @interface baseSailplane : NSObject
+{
+    int sailplaneEnum;
+}
+
+typedef enum {
+    SINGLE,
+    DOUBLE,
+    TRIPLE
+} sailplaneEnum;
+
+//data members for glide ratio, price point, max speed, and isAerobatic bool
+@property int glideRatio;
+@property NSString *pricePoint;
+@property int maxSpeed;
+@property bool isAerobatic;
+
+//initialize
+-(id)init;
+
+//calculation method for flight time
+-(void)calculateFlightTime;
+
+
+
 
 @end

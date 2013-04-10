@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "baseSailplane.h"
+#import "singleSeatSailplane.h"
+#import "doubleSeatSailplane.h"
+#import "tripleSeatSailplane.h"
 
 @interface sailplaneFactory : NSObject
+
++(baseSailplane *)createNewSailplane: (int)sailplaneType;
 
 @end

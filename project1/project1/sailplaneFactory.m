@@ -9,5 +9,20 @@
 #import "sailplaneFactory.h"
 
 @implementation sailplaneFactory
++(baseSailplane *)createNewSailplane:(int)sailplaneType
+{
+    if (sailplaneType == 0) {
+        return [[singleSeatSailplane alloc] init];
+    }
+    else if (sailplaneType == 1) {
+        return [[doubleSeatSailplane alloc] init];
+    }
+    else if (sailplaneType == 2) {
+        return [[tripleSeatSailplane alloc] init];
+    }
+    else {
+        return nil;
+    }
+}
 
 @end
