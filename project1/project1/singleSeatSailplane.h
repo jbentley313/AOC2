@@ -9,5 +9,8 @@
 #import "baseSailplane.h"
 
 @interface singleSeatSailplane : baseSailplane
+{
+     
+}
 
 @end

@@ -20,6 +20,7 @@
     {
         [self setGlideRatio:38];
         [self setPricePoint:(@"low")];
+        [self setIsAerobatic:YES];
     }
     return self;
 };

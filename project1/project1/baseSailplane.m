@@ -22,7 +22,7 @@
         [self setGlideRatio:0];
         [self setMaxSpeed:0];
         [self setIsAerobatic:NO];
-        [self setPricePoint:nil];
+        [self setPricePoint:@""];
     }
     return self;
 }

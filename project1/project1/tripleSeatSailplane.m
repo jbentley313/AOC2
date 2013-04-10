@@ -10,4 +10,19 @@
 
 @implementation tripleSeatSailplane
 
+@synthesize glideRatio, pricePoint, isAerobatic;
+
+//customize init
+-(id)init
+{
+    self = [super init];
+    if (self != nil)
+    {
+        [self setGlideRatio:28];
+        [self setPricePoint:(@"high")];
+        [self setIsAerobatic:NO];
+    }
+    return self;
+};
+
 @end
