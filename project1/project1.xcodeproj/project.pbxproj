@@ -19,6 +19,11 @@
 		BB1072321713BA1B00831B37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1072311713BA1B00831B37 /* ViewController.m */; };
 		BB1072351713BA1B00831B37 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1072331713BA1B00831B37 /* ViewController_iPhone.xib */; };
 		BB1072381713BA1B00831B37 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1072361713BA1B00831B37 /* ViewController_iPad.xib */; };
+		BB62867317150D1500133269 /* sailplaneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867217150D1500133269 /* sailplaneFactory.m */; };
+		BB62867617150D5500133269 /* baseSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867517150D5500133269 /* baseSailplane.m */; };
+		BB62867917150DBD00133269 /* singleSeatSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867817150DBD00133269 /* singleSeatSailplane.m */; };
+		BB62867C17150DD300133269 /* doubleSeatSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867B17150DD300133269 /* doubleSeatSailplane.m */; };
+		BB62867F17150DFE00133269 /* tripleSeatSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867E17150DFE00133269 /* tripleSeatSailplane.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,16 @@
 		BB1072311713BA1B00831B37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BB1072341713BA1B00831B37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		BB1072371713BA1B00831B37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		BB62867117150D1500133269 /* sailplaneFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sailplaneFactory.h; sourceTree = "<group>"; };
+		BB62867217150D1500133269 /* sailplaneFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sailplaneFactory.m; sourceTree = "<group>"; };
+		BB62867417150D5500133269 /* baseSailplane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseSailplane.h; sourceTree = "<group>"; };
+		BB62867517150D5500133269 /* baseSailplane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseSailplane.m; sourceTree = "<group>"; };
+		BB62867717150DBD00133269 /* singleSeatSailplane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleSeatSailplane.h; sourceTree = "<group>"; };
+		BB62867817150DBD00133269 /* singleSeatSailplane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = singleSeatSailplane.m; sourceTree = "<group>"; };
+		BB62867A17150DD300133269 /* doubleSeatSailplane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = doubleSeatSailplane.h; sourceTree = "<group>"; };
+		BB62867B17150DD300133269 /* doubleSeatSailplane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = doubleSeatSailplane.m; sourceTree = "<group>"; };
+		BB62867D17150DFE00133269 /* tripleSeatSailplane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tripleSeatSailplane.h; sourceTree = "<group>"; };
+		BB62867E17150DFE00133269 /* tripleSeatSailplane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tripleSeatSailplane.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +107,16 @@
 				BB1072331713BA1B00831B37 /* ViewController_iPhone.xib */,
 				BB1072361713BA1B00831B37 /* ViewController_iPad.xib */,
 				BB10721F1713BA1B00831B37 /* Supporting Files */,
+				BB62867117150D1500133269 /* sailplaneFactory.h */,
+				BB62867217150D1500133269 /* sailplaneFactory.m */,
+				BB62867417150D5500133269 /* baseSailplane.h */,
+				BB62867517150D5500133269 /* baseSailplane.m */,
+				BB62867717150DBD00133269 /* singleSeatSailplane.h */,
+				BB62867817150DBD00133269 /* singleSeatSailplane.m */,
+				BB62867A17150DD300133269 /* doubleSeatSailplane.h */,
+				BB62867B17150DD300133269 /* doubleSeatSailplane.m */,
+				BB62867D17150DFE00133269 /* tripleSeatSailplane.h */,
+				BB62867E17150DFE00133269 /* tripleSeatSailplane.m */,
 			);
 			path = project1;
 			sourceTree = "<group>";
@@ -180,6 +205,11 @@
 				BB1072251713BA1B00831B37 /* main.m in Sources */,
 				BB1072291713BA1B00831B37 /* AppDelegate.m in Sources */,
 				BB1072321713BA1B00831B37 /* ViewController.m in Sources */,
+				BB62867317150D1500133269 /* sailplaneFactory.m in Sources */,
+				BB62867617150D5500133269 /* baseSailplane.m in Sources */,
+				BB62867917150DBD00133269 /* singleSeatSailplane.m in Sources */,
+				BB62867C17150DD300133269 /* doubleSeatSailplane.m in Sources */,
+				BB62867F17150DFE00133269 /* tripleSeatSailplane.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +340,7 @@
 				BB10723D1713BA1B00831B37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
