@@ -10,7 +10,7 @@
 
 @implementation doubleSeatSailplane
 
-@synthesize glideRatio, pricePoint, isAerobatic;
+@synthesize glideRatio, pricePoint, isAerobatic, weight;
 
 //customize init
 -(id)init
@@ -19,7 +19,7 @@
     if (self != nil)
     {
         [self setGlideRatio:32];
-        [self setPricePoint:(@"medium")];
+        [self setPricePoint:(@"")];
         [self setIsAerobatic:YES];
     }
     return self;

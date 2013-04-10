@@ -10,7 +10,7 @@
 
 @implementation singleSeatSailplane
 
-@synthesize glideRatio, pricePoint;
+@synthesize glideRatio, pricePoint, isAerobatic, weight;
 
 //customize init
 -(id)init
@@ -21,6 +21,7 @@
         [self setGlideRatio:38];
         [self setPricePoint:(@"low")];
         [self setIsAerobatic:YES];
+       
     }
     return self;
 };

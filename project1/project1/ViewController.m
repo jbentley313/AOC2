@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad
 {
-    
+    singleSeatSailplane *mini = (singleSeatSailplane*)[sailplaneFactory createNewSailplane:SINGLE];
+    [mini setGlideRatio:50];
+//    [mini setPricePoint:@"HIGH!"];
+    NSLog(@"The glide ratio is %d", [mini glideRatio]);
+    NSLog(@"Aerobat? %@", [mini isAerobatic]? @"yes" : @"no");
+    NSLog(@"price is %@", [mini pricePoint]);
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

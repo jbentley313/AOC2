@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "sailplaneFactory.h"
 
 @interface ViewController : UIViewController
 

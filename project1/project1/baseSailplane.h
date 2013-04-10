@@ -24,6 +24,8 @@ typedef enum {
 @property NSString *pricePoint;
 @property int maxSpeed;
 @property bool isAerobatic;
+@property int weight;
+
 
 //initialize
 -(id)init;

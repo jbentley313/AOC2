@@ -11,7 +11,7 @@
 @implementation baseSailplane
 
 //create geter and setter methods for each property
-@synthesize glideRatio, isAerobatic, pricePoint, maxSpeed;
+@synthesize glideRatio, isAerobatic, pricePoint, maxSpeed, weight;
 
 //initialize base sailplane
 -(id)init
@@ -23,6 +23,8 @@
         [self setMaxSpeed:0];
         [self setIsAerobatic:NO];
         [self setPricePoint:@""];
+        [self setWeight:300];
+        
     }
     return self;
 }
