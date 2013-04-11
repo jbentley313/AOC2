@@ -10,7 +10,7 @@
 
 @implementation singleSeatSailplane
 
-@synthesize glideRatio, pricePoint, isAerobatic, weight;
+@synthesize glideRatio, pricePoint, isAerobatic;
 
 //customize init
 -(id)init

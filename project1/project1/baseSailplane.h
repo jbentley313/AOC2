@@ -21,10 +21,9 @@ typedef enum {
 
 //data members for glide ratio, price point, max speed, and isAerobatic bool
 @property int glideRatio;
-@property NSString *pricePoint;
-@property int maxSpeed;
+@property (strong) NSString *pricePoint;
 @property bool isAerobatic;
-@property int weight;
+@property int flightDistance;
 
 
 //initialize

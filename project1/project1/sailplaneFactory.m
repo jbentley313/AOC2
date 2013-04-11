@@ -9,6 +9,8 @@
 #import "sailplaneFactory.h"
 
 @implementation sailplaneFactory
+
+//create sailplane based on sailplane type
 +(baseSailplane *)createNewSailplane:(int)sailplaneType
 {
     if (sailplaneType == 0) {

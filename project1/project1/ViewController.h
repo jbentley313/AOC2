@@ -10,5 +10,12 @@
 #import "sailplaneFactory.h"
 
 @interface ViewController : UIViewController
+{
+    UILabel *sailplaneType;
+    UILabel *spGlide;
+    UILabel *spName;
+    UILabel *spDistance;
+    
+}
 
 @end
