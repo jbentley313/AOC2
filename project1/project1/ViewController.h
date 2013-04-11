@@ -11,10 +11,12 @@
 
 @interface ViewController : UIViewController
 {
-    UILabel *sailplaneType;
-    UILabel *spGlide;
-    UILabel *spName;
-    UILabel *spDistance;
+    UILabel *spName1;
+    UILabel *spName2;
+    UILabel *spName3;
+    UILabel *spName1Details;
+    UILabel *spName2Details;
+    UILabel *spName3Details;
     
 }
 

@@ -16,49 +16,81 @@
 
 - (void)viewDidLoad
 {
-    
-    //Sailplane Name UILabel
-    spName = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 25.0f)];
-    if (spName != nil) {
-        spName.text = @"Sailplane Name: ";
-        spName.textAlignment = NSTextAlignmentLeft;
-        [self.view addSubview:spName];
-    }
-    
-    //Sailplane Type UILabel
-    sailplaneType = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 50.0f, 200.0f, 25.0f)];
-    if (sailplaneType != nil) {
-        sailplaneType.text = @"Sailplane Type: ";
-        sailplaneType.textAlignment = NSTextAlignmentLeft;
-        [self.view addSubview:sailplaneType];
-    }
-    
-    //Glide Ratio UILabel
-    spGlide = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 200.0f, 25.0f)];
-    if (spGlide != nil) {
-        spGlide.text = @"Glide Ratio: ";
-        spGlide.textAlignment = NSTextAlignmentLeft;
-        [self.view addSubview:spGlide];
-    }
-    
-    //Total distance UILabel
-    spDistance = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 150.0f, 200.0f, 25.0f)];
-    if (spDistance != nil) {
-        spDistance.text = @"Max distance from 2000 feet: ";
-        spDistance.textAlignment = NSTextAlignmentLeft;
-        [self.view addSubview:spDistance];
-    }
-    
-    
+    //create single seat sailplane
     singleSeatSailplane *mini = (singleSeatSailplane*)[sailplaneFactory createNewSailplane:SINGLE];
     [mini setGlideRatio:40];
-//    [mini setPricePoint:@"HIGH!"];
-    NSLog(@"The glide ratio is %d", [mini glideRatio]);
+    [mini setPricePoint:@"low"];
     [mini calculateFlightTime];
-    
 //    NSLog()
     NSLog(@"Aerobat? %@", [mini isAerobatic]? @"yes" : @"no");
     NSLog(@"price is %@", [mini pricePoint]);
+    
+    
+    //create double seat sailplane
+    doubleSeatSailplane *trainer = (doubleSeatSailplane*)[sailplaneFactory createNewSailplane:DOUBLE];
+    [trainer setGlideRatio:35];
+    [trainer setPricePoint:@"medium"];
+    [trainer calculateFlightTime];
+    
+    //create triple seat sailplane
+    tripleSeatSailplane *family = (tripleSeatSailplane*)[sailplaneFactory createNewSailplane:TRIPLE];
+    [family setGlideRatio:28];
+    [family setPricePoint:@"high"];
+    [family calculateFlightTime];
+    
+    
+    
+    //Sailplane1 UILabel
+    spName1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 25.0f)];
+    if (spName1 != nil) {
+        spName1.text = @"Sailplane 1: ";
+        spName1.textAlignment = NSTextAlignmentLeft;
+        [self.view addSubview:spName1];
+    }
+    
+    //Sailplane1 Details UILabel
+    spName1Details = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 0.0f, 650.0f, 25.0f)];
+    if (spName1Details != nil) {
+        spName1Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this sailplane will fly %d miles at 2000 feet. Price: %@.", [mini glideRatio],[mini flightDistance], [mini pricePoint]];
+        spName1Details.textAlignment = NSTextAlignmentLeft;
+        [self.view addSubview:spName1Details];
+    }
+    
+    
+    //Sailplane2 UILabel
+    spName2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 50.0f, 200.0f, 25.0f)];
+    if (spName2 != nil) {
+        spName2.text = @"Sailplane 2: ";
+        spName2.textAlignment = NSTextAlignmentLeft;
+        [self.view addSubview:spName2];
+    }
+    
+    
+    //Sailplane2 Details UILabel
+    spName2Details = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 50.0f, 650.0f, 25.0f)];
+    if (spName2Details != nil) {
+        spName2Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this sailplane will fly %d miles at 2000 feet. Price: %@.", [trainer glideRatio],[trainer flightDistance], [trainer pricePoint]];
+        spName2Details.textAlignment = NSTextAlignmentLeft;
+        [self.view addSubview:spName2Details];
+    }
+    
+    
+    //Sailplane3 UILabel
+    spName3 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 200.0f, 25.0f)];
+    if (spName3 != nil) {
+        spName3.text = @"Sailplane 3: ";
+        spName3.textAlignment = NSTextAlignmentLeft;
+        [self.view addSubview:spName3];
+    }
+    
+    //Sailplane3 Details UILabel
+    spName2Details = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 100.0f, 600.0f, 25.0f)];
+    if (spName2Details != nil) {
+        spName2Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this sailplane will fly %d miles at 2000 feet. Price: %@.", [family glideRatio],[family flightDistance], [family pricePoint]];
+        spName2Details.textAlignment = NSTextAlignmentLeft;
+        [self.view addSubview:spName2Details];
+    }
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

@@ -22,6 +22,7 @@
         [self setGlideRatio:0];
         [self setIsAerobatic:NO];
         [self setPricePoint:@""];
+        [self setFlightDistance:0];
         
         
     }
