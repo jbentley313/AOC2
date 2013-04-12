@@ -10,7 +10,15 @@
 
 @interface singleSeatSailplane : baseSailplane
 {
-     
+    int selfPowered;
 }
 
+//enum if sailplane has power
+typedef enum{
+    NONE,
+    GAS,
+    ELECTRIC
+}selfPowered;
+
+@property int power;
 @end

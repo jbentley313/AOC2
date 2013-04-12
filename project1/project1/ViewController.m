@@ -18,11 +18,14 @@
 {
     //create single seat sailplane
     singleSeatSailplane *mini = (singleSeatSailplane*)[sailplaneFactory createNewSailplane:SINGLE];
-    [mini setGlideRatio:40];
-    [mini setPricePoint:@"low"];
-    [mini calculateFlightTime];
-    NSLog(@"Aerobat? %@", [mini isAerobatic]? @"yes" : @"no");
-    NSLog(@"price is %@", [mini pricePoint]);
+    if (mini != nil) {
+        [mini setGlideRatio:40];
+        [mini setPricePoint:@"low"];
+        [mini setPower:NONE];
+        [mini calculateFlightTime];
+//        NSLog(@"Aerobat? %@", [mini isAerobatic]? @"yes" : @"no");
+//        NSLog(@"price is %@", [mini pricePoint]);
+    }
     
     
     //create double seat sailplane
