@@ -1,7 +1,7 @@
 //
 //  tripleSeatSailplane.m
 //  project1
-//
+//  AOC2 1304 Jason Bentley
 //  Created by theOwner on 4/9/13.
 //  Copyright (c) 2013 theOwner. All rights reserved.
 //
@@ -10,7 +10,8 @@
 
 @implementation tripleSeatSailplane
 
-@synthesize glideRatio, pricePoint, isAerobatic;
+//create geter and setter methods for each property
+@synthesize glideRatio, pricePoint, isAerobatic, flyable;
 
 //customize init
 -(id)init
