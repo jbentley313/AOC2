@@ -21,7 +21,6 @@
     [mini setGlideRatio:40];
     [mini setPricePoint:@"low"];
     [mini calculateFlightTime];
-//    NSLog()
     NSLog(@"Aerobat? %@", [mini isAerobatic]? @"yes" : @"no");
     NSLog(@"price is %@", [mini pricePoint]);
     
@@ -41,9 +40,10 @@
     
     
     //Sailplane1 UILabel
-    spName1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 25.0f)];
+    spName1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 95.0f, 25.0f)];
     if (spName1 != nil) {
         spName1.text = @"Sailplane 1: ";
+        spName1.backgroundColor = [UIColor yellowColor];
         spName1.textAlignment = NSTextAlignmentLeft;
         [self.view addSubview:spName1];
     }
@@ -58,9 +58,10 @@
     
     
     //Sailplane2 UILabel
-    spName2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 50.0f, 200.0f, 25.0f)];
+    spName2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 50.0f, 95.0f, 25.0f)];
     if (spName2 != nil) {
         spName2.text = @"Sailplane 2: ";
+        spName2.backgroundColor = [UIColor yellowColor];
         spName2.textAlignment = NSTextAlignmentLeft;
         [self.view addSubview:spName2];
     }
@@ -76,15 +77,16 @@
     
     
     //Sailplane3 UILabel
-    spName3 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 200.0f, 25.0f)];
+    spName3 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 95.0f, 25.0f)];
     if (spName3 != nil) {
         spName3.text = @"Sailplane 3: ";
+        spName3.backgroundColor = [UIColor yellowColor];
         spName3.textAlignment = NSTextAlignmentLeft;
         [self.view addSubview:spName3];
     }
     
     //Sailplane3 Details UILabel
-    spName2Details = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 100.0f, 600.0f, 25.0f)];
+    spName2Details = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 100.0f, 650.0f, 25.0f)];
     if (spName2Details != nil) {
         spName2Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this sailplane will fly %d miles at 2000 feet. Price: %@.", [family glideRatio],[family flightDistance], [family pricePoint]];
         spName2Details.textAlignment = NSTextAlignmentLeft;
