@@ -60,11 +60,12 @@
     }
     
     //Sailplane1 Details UILabel
-    spName1Details = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 0.0f, 750.0f, 25.0f)];
+    spName1Details = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 0.0f, 240.0f, 25.0f)];
     if (spName1Details != nil) {
-        spName1Details.numberOfLines = 0;
         spName1Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this %@ sailplane will fly %d miles at 2000 feet. Price: %@.", [mini glideRatio], [mini isAerobatic]? @"aerobatic" : @"non-aerobatic", [mini flightDistance], [mini pricePoint] ];
         spName1Details.textAlignment = NSTextAlignmentLeft;
+        spName1Details.numberOfLines = 0;
+        [spName1Details sizeToFit];
         [self.view addSubview:spName1Details];
     }
     
@@ -80,11 +81,12 @@
     
     
     //Sailplane2 Details UILabel
-    spName2Details = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 150.0f, 750.0f, 25.0f)];
+    spName2Details = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 150.0f, 240.0f, 30.0f)];
     if (spName2Details != nil) {
-        spName2Details.numberOfLines = 0;
         spName2Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this %@ sailplane will fly %d miles at 2000 feet. Price: %@.", [trainer glideRatio], [trainer isAerobatic]? @"aerobatic" : @"non-aerobatic", [trainer flightDistance], [trainer pricePoint]];
         spName2Details.textAlignment = NSTextAlignmentLeft;
+        spName2Details.numberOfLines = 0;
+        [spName2Details sizeToFit];
         [self.view addSubview:spName2Details];
     }
     
@@ -99,11 +101,13 @@
     }
     
     //Sailplane3 Details UILabel
-    spName2Details = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 300.0f, 750.0f, 25.0f)];
-    if (spName2Details != nil) {
-        spName2Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this sailplane will fly %d miles at 2000 feet. Price: %@.", [family glideRatio],[family flightDistance], [family pricePoint]];
-        spName2Details.textAlignment = NSTextAlignmentLeft;
-        [self.view addSubview:spName2Details];
+    spName3Details = [[UILabel alloc] initWithFrame:CGRectMake(100.0f, 300.0f, 240.0f, 25.0f)];
+    if (spName3Details != nil) {
+        spName3Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this sailplane will fly %d miles at 2000 feet. Price: %@.", [family glideRatio],[family flightDistance], [family pricePoint]];
+        spName3Details.textAlignment = NSTextAlignmentLeft;
+        spName3Details.numberOfLines = 0;
+        [spName3Details sizeToFit];
+        [self.view addSubview:spName3Details];
     }
 
     [super viewDidLoad];

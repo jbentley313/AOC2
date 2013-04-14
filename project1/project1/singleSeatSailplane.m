@@ -11,7 +11,7 @@
 @implementation singleSeatSailplane
 
 //create geter and setter methods for each property
-@synthesize glideRatio, pricePoint, isAerobatic, flightDistance, power;
+@synthesize power, flightDistance;
 
 //customize init
 -(id)init
