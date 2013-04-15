@@ -14,9 +14,9 @@
     IBOutlet UIButton *spName1;
     IBOutlet UIButton *spName2;
     IBOutlet UIButton *spName3;
-    IBOutlet UILabel *spName1Details;
-    IBOutlet UILabel *spName2Details;
-    IBOutlet UILabel *spName3Details;
+    IBOutlet UITextField *spName1Details;
+    IBOutlet UITextField *spName2Details;
+    IBOutlet UITextField *spName3Details;
     
 }
 
