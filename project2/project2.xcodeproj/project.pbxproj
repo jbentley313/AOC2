@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB1072191713BA1B00831B37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1072181713BA1B00831B37 /* UIKit.framework */; };
+		BB10721B1713BA1B00831B37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB10721A1713BA1B00831B37 /* Foundation.framework */; };
+		BB10721D1713BA1B00831B37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB10721C1713BA1B00831B37 /* CoreGraphics.framework */; };
+		BB1072231713BA1B00831B37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB1072211713BA1B00831B37 /* InfoPlist.strings */; };
+		BB1072251713BA1B00831B37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1072241713BA1B00831B37 /* main.m */; };
+		BB1072291713BA1B00831B37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1072281713BA1B00831B37 /* AppDelegate.m */; };
+		BB10722B1713BA1B00831B37 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BB10722A1713BA1B00831B37 /* Default.png */; };
+		BB10722D1713BA1B00831B37 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB10722C1713BA1B00831B37 /* Default@2x.png */; };
+		BB10722F1713BA1B00831B37 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB10722E1713BA1B00831B37 /* Default-568h@2x.png */; };
+		BB1072321713BA1B00831B37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1072311713BA1B00831B37 /* ViewController.m */; };
+		BB1072351713BA1B00831B37 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1072331713BA1B00831B37 /* ViewController_iPhone.xib */; };
+		BB1072381713BA1B00831B37 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1072361713BA1B00831B37 /* ViewController_iPad.xib */; };
+		BB62867317150D1500133269 /* sailplaneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867217150D1500133269 /* sailplaneFactory.m */; };
+		BB62867617150D5500133269 /* baseSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867517150D5500133269 /* baseSailplane.m */; };
+		BB62867917150DBD00133269 /* singleSeatSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867817150DBD00133269 /* singleSeatSailplane.m */; };
+		BB62867C17150DD300133269 /* doubleSeatSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867B17150DD300133269 /* doubleSeatSailplane.m */; };
+		BB62867F17150DFE00133269 /* tripleSeatSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867E17150DFE00133269 /* tripleSeatSailplane.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB1072151713BA1B00831B37 /* project2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB1072181713BA1B00831B37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BB10721A1713BA1B00831B37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BB10721C1713BA1B00831B37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BB1072201713BA1B00831B37 /* project2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "project2-Info.plist"; sourceTree = "<group>"; };
+		BB1072221713BA1B00831B37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BB1072241713BA1B00831B37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB1072261713BA1B00831B37 /* project2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "project2-Prefix.pch"; sourceTree = "<group>"; };
+		BB1072271713BA1B00831B37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BB1072281713BA1B00831B37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BB10722A1713BA1B00831B37 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BB10722C1713BA1B00831B37 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BB10722E1713BA1B00831B37 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BB1072301713BA1B00831B37 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BB1072311713BA1B00831B37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BB1072341713BA1B00831B37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		BB1072371713BA1B00831B37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		BB62867117150D1500133269 /* sailplaneFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sailplaneFactory.h; sourceTree = "<group>"; };
+		BB62867217150D1500133269 /* sailplaneFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sailplaneFactory.m; sourceTree = "<group>"; };
+		BB62867417150D5500133269 /* baseSailplane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseSailplane.h; sourceTree = "<group>"; };
+		BB62867517150D5500133269 /* baseSailplane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseSailplane.m; sourceTree = "<group>"; };
+		BB62867717150DBD00133269 /* singleSeatSailplane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleSeatSailplane.h; sourceTree = "<group>"; };
+		BB62867817150DBD00133269 /* singleSeatSailplane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = singleSeatSailplane.m; sourceTree = "<group>"; };
+		BB62867A17150DD300133269 /* doubleSeatSailplane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = doubleSeatSailplane.h; sourceTree = "<group>"; };
+		BB62867B17150DD300133269 /* doubleSeatSailplane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = doubleSeatSailplane.m; sourceTree = "<group>"; };
+		BB62867D17150DFE00133269 /* tripleSeatSailplane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tripleSeatSailplane.h; sourceTree = "<group>"; };
+		BB62867E17150DFE00133269 /* tripleSeatSailplane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tripleSeatSailplane.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB1072121713BA1B00831B37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB1072191713BA1B00831B37 /* UIKit.framework in Frameworks */,
+				BB10721B1713BA1B00831B37 /* Foundation.framework in Frameworks */,
+				BB10721D1713BA1B00831B37 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB10720C1713BA1B00831B37 = {
+			isa = PBXGroup;
+			children = (
+				BB10721E1713BA1B00831B37 /* project2 */,
+				BB1072171713BA1B00831B37 /* Frameworks */,
+				BB1072161713BA1B00831B37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB1072161713BA1B00831B37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB1072151713BA1B00831B37 /* project2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB1072171713BA1B00831B37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB1072181713BA1B00831B37 /* UIKit.framework */,
+				BB10721A1713BA1B00831B37 /* Foundation.framework */,
+				BB10721C1713BA1B00831B37 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB10721E1713BA1B00831B37 /* project2 */ = {
+			isa = PBXGroup;
+			children = (
+				BB1072271713BA1B00831B37 /* AppDelegate.h */,
+				BB1072281713BA1B00831B37 /* AppDelegate.m */,
+				BB1072301713BA1B00831B37 /* ViewController.h */,
+				BB1072311713BA1B00831B37 /* ViewController.m */,
+				BB1072331713BA1B00831B37 /* ViewController_iPhone.xib */,
+				BB1072361713BA1B00831B37 /* ViewController_iPad.xib */,
+				BB10721F1713BA1B00831B37 /* Supporting Files */,
+				BB62867117150D1500133269 /* sailplaneFactory.h */,
+				BB62867217150D1500133269 /* sailplaneFactory.m */,
+				BB62867417150D5500133269 /* baseSailplane.h */,
+				BB62867517150D5500133269 /* baseSailplane.m */,
+				BB62867717150DBD00133269 /* singleSeatSailplane.h */,
+				BB62867817150DBD00133269 /* singleSeatSailplane.m */,
+				BB62867A17150DD300133269 /* doubleSeatSailplane.h */,
+				BB62867B17150DD300133269 /* doubleSeatSailplane.m */,
+				BB62867D17150DFE00133269 /* tripleSeatSailplane.h */,
+				BB62867E17150DFE00133269 /* tripleSeatSailplane.m */,
+			);
+			name = project2;
+			path = project1;
+			sourceTree = "<group>";
+		};
+		BB10721F1713BA1B00831B37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB1072201713BA1B00831B37 /* project2-Info.plist */,
+				BB1072211713BA1B00831B37 /* InfoPlist.strings */,
+				BB1072241713BA1B00831B37 /* main.m */,
+				BB1072261713BA1B00831B37 /* project2-Prefix.pch */,
+				BB10722A1713BA1B00831B37 /* Default.png */,
+				BB10722C1713BA1B00831B37 /* Default@2x.png */,
+				BB10722E1713BA1B00831B37 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB1072141713BA1B00831B37 /* project2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB10723B1713BA1B00831B37 /* Build configuration list for PBXNativeTarget "project2" */;
+			buildPhases = (
+				BB1072111713BA1B00831B37 /* Sources */,
+				BB1072121713BA1B00831B37 /* Frameworks */,
+				BB1072131713BA1B00831B37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = project2;
+			productName = project1;
+			productReference = BB1072151713BA1B00831B37 /* project2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB10720D1713BA1B00831B37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = theOwner;
+			};
+			buildConfigurationList = BB1072101713BA1B00831B37 /* Build configuration list for PBXProject "project2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BB10720C1713BA1B00831B37;
+			productRefGroup = BB1072161713BA1B00831B37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB1072141713BA1B00831B37 /* project2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB1072131713BA1B00831B37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB1072231713BA1B00831B37 /* InfoPlist.strings in Resources */,
+				BB10722B1713BA1B00831B37 /* Default.png in Resources */,
+				BB10722D1713BA1B00831B37 /* Default@2x.png in Resources */,
+				BB10722F1713BA1B00831B37 /* Default-568h@2x.png in Resources */,
+				BB1072351713BA1B00831B37 /* ViewController_iPhone.xib in Resources */,
+				BB1072381713BA1B00831B37 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB1072111713BA1B00831B37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB1072251713BA1B00831B37 /* main.m in Sources */,
+				BB1072291713BA1B00831B37 /* AppDelegate.m in Sources */,
+				BB1072321713BA1B00831B37 /* ViewController.m in Sources */,
+				BB62867317150D1500133269 /* sailplaneFactory.m in Sources */,
+				BB62867617150D5500133269 /* baseSailplane.m in Sources */,
+				BB62867917150DBD00133269 /* singleSeatSailplane.m in Sources */,
+				BB62867C17150DD300133269 /* doubleSeatSailplane.m in Sources */,
+				BB62867F17150DFE00133269 /* tripleSeatSailplane.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BB1072211713BA1B00831B37 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB1072221713BA1B00831B37 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BB1072331713BA1B00831B37 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB1072341713BA1B00831B37 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		BB1072361713BA1B00831B37 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB1072371713BA1B00831B37 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB1072391713BA1B00831B37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB10723A1713BA1B00831B37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB10723C1713BA1B00831B37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "project1/project2-Prefix.pch";
+				INFOPLIST_FILE = "project1/project2-Info.plist";
+				PRODUCT_NAME = project2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BB10723D1713BA1B00831B37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "project1/project2-Prefix.pch";
+				INFOPLIST_FILE = "project1/project2-Info.plist";
+				PRODUCT_NAME = project2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB1072101713BA1B00831B37 /* Build configuration list for PBXProject "project2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB1072391713BA1B00831B37 /* Debug */,
+				BB10723A1713BA1B00831B37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB10723B1713BA1B00831B37 /* Build configuration list for PBXNativeTarget "project2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB10723C1713BA1B00831B37 /* Debug */,
+				BB10723D1713BA1B00831B37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB10720D1713BA1B00831B37 /* Project object */;
+}
