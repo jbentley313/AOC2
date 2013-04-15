@@ -97,6 +97,12 @@
     UIButton *button = (UIButton*)sender;
     if (button != nil) {
         if (button.tag == 0) {
+            
+            //disable current selected button while enabling other buttons
+            spName1.enabled = false;
+            spName2.enabled = true;
+            spName3.enabled = true;
+            
             //create single seat sailplane
             singleSeatSailplane *mini = (singleSeatSailplane*)[sailplaneFactory createNewSailplane:SINGLE];
             if (mini != nil) {
@@ -116,6 +122,12 @@
             
         }
         else if (button.tag == 1) {
+    
+            //disable current selected button while enabling other buttons
+            spName1.enabled = true;
+            spName2.enabled = false;
+            spName3.enabled = true;
+            
             //create double seat sailplane
             doubleSeatSailplane *trainer = (doubleSeatSailplane*)[sailplaneFactory createNewSailplane:DOUBLE];
             if (trainer != nil) {
@@ -135,6 +147,12 @@
                 
             }
         } else if (button.tag == 2) {
+            
+            //disable current selected button while enabling other buttons
+            spName1.enabled = true;
+            spName2.enabled = true;
+            spName3.enabled = false;
+            
             //create triple seat sailplane
             tripleSeatSailplane *family = (tripleSeatSailplane*)[sailplaneFactory createNewSailplane:TRIPLE];
             if (family != nil) {
