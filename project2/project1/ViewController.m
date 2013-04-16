@@ -8,6 +8,7 @@
 //
 
 #import "ViewController.h"
+#import "glideRatioManager.h"
 
 @interface ViewController ()
 

@@ -24,6 +24,7 @@
 		BB62867917150DBD00133269 /* singleSeatSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867817150DBD00133269 /* singleSeatSailplane.m */; };
 		BB62867C17150DD300133269 /* doubleSeatSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867B17150DD300133269 /* doubleSeatSailplane.m */; };
 		BB62867F17150DFE00133269 /* tripleSeatSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867E17150DFE00133269 /* tripleSeatSailplane.m */; };
+		BBDCF0CD171CF9CF001D2429 /* glideRatioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF0CC171CF9CF001D2429 /* glideRatioManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		BB62867B17150DD300133269 /* doubleSeatSailplane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = doubleSeatSailplane.m; sourceTree = "<group>"; };
 		BB62867D17150DFE00133269 /* tripleSeatSailplane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tripleSeatSailplane.h; sourceTree = "<group>"; };
 		BB62867E17150DFE00133269 /* tripleSeatSailplane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tripleSeatSailplane.m; sourceTree = "<group>"; };
+		BBDCF0CB171CF9CF001D2429 /* glideRatioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glideRatioManager.h; sourceTree = "<group>"; };
+		BBDCF0CC171CF9CF001D2429 /* glideRatioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = glideRatioManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				BB62867B17150DD300133269 /* doubleSeatSailplane.m */,
 				BB62867D17150DFE00133269 /* tripleSeatSailplane.h */,
 				BB62867E17150DFE00133269 /* tripleSeatSailplane.m */,
+				BBDCF0CB171CF9CF001D2429 /* glideRatioManager.h */,
+				BBDCF0CC171CF9CF001D2429 /* glideRatioManager.m */,
 			);
 			name = project2;
 			path = project1;
@@ -211,6 +216,7 @@
 				BB62867917150DBD00133269 /* singleSeatSailplane.m in Sources */,
 				BB62867C17150DD300133269 /* doubleSeatSailplane.m in Sources */,
 				BB62867F17150DFE00133269 /* tripleSeatSailplane.m in Sources */,
+				BBDCF0CD171CF9CF001D2429 /* glideRatioManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
