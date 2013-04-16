@@ -42,7 +42,9 @@
             spName2.enabled = true;
             spName3.enabled = true;
             
-            spName1Details.text = @"You have chosen a single seat sailplane.";
+            spName1Details.text = @"You have chosen a single seat sailplane. Please choose a glide ratio.";
+            stepControl.hidden = NO;
+            glideStepLabel.hidden = NO;
             
             
             
@@ -84,6 +86,15 @@
         else if (selectedIndex == 2) {
             self.view.backgroundColor = [UIColor greenColor];
         }
+    }
+}
+
+-(IBAction)onStep:(id)sender;
+{
+    stepControl = (UIStepper*)sender;
+    if (stepControl != nil) {
+        int currentValue = stepControl.value;
+        spName1Details.text = [NSString stringWithFormat:@"Glide ratio: %d", currentValue];
     }
 }
 

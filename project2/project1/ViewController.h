@@ -19,10 +19,14 @@
     IBOutlet UITextView *spName2Details;
     IBOutlet UITextView *spName3Details;
     IBOutlet UISegmentedControl *colorControl;
+    IBOutlet UIStepper *stepControl;
+    IBOutlet UILabel *glideStepLabel;
     
 }
 
 -(IBAction)onClick:(id)sender;
 
 -(IBAction)onChange:(id)sender;
+
+-(IBAction)onStep:(id)sender;
 @end
