@@ -11,14 +11,14 @@
 
 @interface ViewController : UIViewController
 {
-    IBOutlet UIButton *spName1;
-    IBOutlet UIButton *spName2;
-    IBOutlet UIButton *spName3;
-    IBOutlet UILabel *spName1Details;
-    IBOutlet UILabel *spName2Details;
-    IBOutlet UILabel *spName3Details;
+     UILabel *spName1;
+     UILabel *spName2;
+     UILabel *spName3;
+     UILabel *spName1Details;
+     UILabel *spName2Details;
+     UILabel *spName3Details;
     
 }
 
--(IBAction)onClick:(id)sender;
+
 @end

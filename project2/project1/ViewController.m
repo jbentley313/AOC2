@@ -42,23 +42,11 @@
             spName2.enabled = true;
             spName3.enabled = true;
             
-            //create single seat sailplane
-            singleSeatSailplane *mini = (singleSeatSailplane*)[sailplaneFactory createNewSailplane:SINGLE];
-            if (mini != nil) {
-                [mini setGlideRatio:40];
-                [mini setPricePoint:@"high"];
-                [mini setPower:NONE];
-                [mini calculateFlightTime];
-                [mini setIsAerobatic:YES];
-            }
+            spName1Details.text = @"You have chosen a single seat sailplane.";
             
-            //Sailplane1 Details UILables
-            if (spName1Details != nil) {
-                spName1Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this %@ sailplane will fly %d miles at 2000 feet. Price: %@.", [mini glideRatio], [mini isAerobatic]? @"aerobatic" : @"non-aerobatic", [mini flightDistance], [mini pricePoint] ];
-                spName1Details.textAlignment = NSTextAlignmentLeft;
-                spName1Details.frame = CGRectMake(spName1Details.frame.origin.x, spName1Details.frame.origin.y, 200.0f, 300.0f);
-                [self.view addSubview:spName1Details];
-            }
+            
+            
+            
         } else if (button.tag == 1) {
     
             //disable current selected button while enabling other buttons
@@ -66,22 +54,9 @@
             spName2.enabled = false;
             spName3.enabled = true;
             
-            //create double seat sailplane
-            doubleSeatSailplane *trainer = (doubleSeatSailplane*)[sailplaneFactory createNewSailplane:DOUBLE];
-            if (trainer != nil) {
-                [trainer setGlideRatio:35];
-                [trainer setPricePoint:@"medium"];
-                [trainer setPilotCount:TWO];
-                [trainer calculateFlightTime];
-                [trainer setIsAerobatic:NO];
-                
-                //Sailplane2 Details UILabel
-                if (spName2Details != nil) {
-                    spName2Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this %@ sailplane will fly %d miles at 2000 feet. Price: %@.", [trainer glideRatio], [trainer isAerobatic]? @"aerobatic" : @"non-aerobatic", [trainer flightDistance], [trainer pricePoint] ];
-                    spName2Details.textAlignment = NSTextAlignmentLeft;
-                    [self.view addSubview:spName2Details];
-                }
-            }
+            spName2Details.text = @"You have chosen a double seat sailplane.";
+            
+            
         } else if (button.tag == 2) {
             
             //disable current selected button while enabling other buttons
@@ -89,20 +64,8 @@
             spName2.enabled = true;
             spName3.enabled = false;
             
-            //create triple seat sailplane
-            tripleSeatSailplane *family = (tripleSeatSailplane*)[sailplaneFactory createNewSailplane:TRIPLE];
-            if (family != nil) {
-                [family setGlideRatio:28];
-                [family setPricePoint:@"high"];
-                [family calculateFlightTime];
-                
-                //Sailplane3 Details UILabel
-                    if (spName3Details != nil) {
-                        spName3Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this sailplane will fly %d miles at 2000 feet. Price: %@.", [family glideRatio],[family flightDistance], [family pricePoint]];
-                        spName3Details.textAlignment = NSTextAlignmentLeft;
-                        [self.view addSubview:spName3Details];
-                    }
-            }
+            spName3Details.text = @"You have chosen a triple seat sailplane.";
+            
         }
     }
 }
@@ -126,3 +89,58 @@
 
 
 @end
+
+//create single seat sailplane
+//singleSeatSailplane *mini = (singleSeatSailplane*)[sailplaneFactory createNewSailplane:SINGLE];
+//if (mini != nil) {
+//    [mini setGlideRatio:40];
+//    [mini setPricePoint:@"high"];
+//    [mini setPower:NONE];
+//    [mini calculateFlightTime];
+//    [mini setIsAerobatic:YES];
+//}
+
+//Sailplane1 Details UILables
+//if (spName1Details != nil) {
+//    spName1Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this %@ sailplane will fly %d miles at 2000 feet. Price: %@.", [mini glideRatio], [mini isAerobatic]? @"aerobatic" : @"non-aerobatic", [mini flightDistance], [mini pricePoint] ];
+//    spName1Details.textAlignment = NSTextAlignmentLeft;
+//    spName1Details.frame = CGRectMake(spName1Details.frame.origin.x, spName1Details.frame.origin.y, 200.0f, 300.0f);
+//    [self.view addSubview:spName1Details];
+//}
+
+
+
+//create double seat sailplane
+//doubleSeatSailplane *trainer = (doubleSeatSailplane*)[sailplaneFactory createNewSailplane:DOUBLE];
+//if (trainer != nil) {
+//    [trainer setGlideRatio:35];
+//    [trainer setPricePoint:@"medium"];
+//    [trainer setPilotCount:TWO];
+//    [trainer calculateFlightTime];
+//    [trainer setIsAerobatic:NO];
+//    
+    //Sailplane2 Details UILabel
+//    if (spName2Details != nil) {
+//        spName2Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this %@ sailplane will fly %d miles at 2000 feet. Price: %@.", [trainer glideRatio], [trainer isAerobatic]? @"aerobatic" : @"non-aerobatic", [trainer flightDistance], [trainer pricePoint] ];
+//        spName2Details.textAlignment = NSTextAlignmentLeft;
+//        [self.view addSubview:spName2Details];
+//    }
+//}
+
+
+
+
+//create triple seat sailplane
+//tripleSeatSailplane *family = (tripleSeatSailplane*)[sailplaneFactory createNewSailplane:TRIPLE];
+//if (family != nil) {
+//    [family setGlideRatio:28];
+//    [family setPricePoint:@"high"];
+//    [family calculateFlightTime];
+//    
+    //Sailplane3 Details UILabel
+//    if (spName3Details != nil) {
+//        spName3Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this sailplane will fly %d miles at 2000 feet. Price: %@.", [family glideRatio],[family flightDistance], [family pricePoint]];
+//        spName3Details.textAlignment = NSTextAlignmentLeft;
+//        [self.view addSubview:spName3Details];
+//    }
+//}

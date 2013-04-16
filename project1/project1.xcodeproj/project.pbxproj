@@ -17,8 +17,9 @@
 		BB10722D1713BA1B00831B37 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB10722C1713BA1B00831B37 /* Default@2x.png */; };
 		BB10722F1713BA1B00831B37 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB10722E1713BA1B00831B37 /* Default-568h@2x.png */; };
 		BB1072321713BA1B00831B37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1072311713BA1B00831B37 /* ViewController.m */; };
-		BB1072351713BA1B00831B37 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1072331713BA1B00831B37 /* ViewController_iPhone.xib */; };
-		BB1072381713BA1B00831B37 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB1072361713BA1B00831B37 /* ViewController_iPad.xib */; };
+		BB16A09A171DC763003D9E4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB16A094171DC763003D9E4A /* InfoPlist.strings */; };
+		BB16A09B171DC763003D9E4A /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB16A096171DC763003D9E4A /* ViewController_iPad.xib */; };
+		BB16A09C171DC763003D9E4A /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB16A098171DC763003D9E4A /* ViewController_iPhone.xib */; };
 		BB62867317150D1500133269 /* sailplaneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867217150D1500133269 /* sailplaneFactory.m */; };
 		BB62867617150D5500133269 /* baseSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867517150D5500133269 /* baseSailplane.m */; };
 		BB62867917150DBD00133269 /* singleSeatSailplane.m in Sources */ = {isa = PBXBuildFile; fileRef = BB62867817150DBD00133269 /* singleSeatSailplane.m */; };
@@ -42,8 +43,9 @@
 		BB10722E1713BA1B00831B37 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BB1072301713BA1B00831B37 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BB1072311713BA1B00831B37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BB1072341713BA1B00831B37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		BB1072371713BA1B00831B37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		BB16A095171DC763003D9E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		BB16A097171DC763003D9E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController_iPad.xib; sourceTree = "<group>"; };
+		BB16A099171DC763003D9E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
 		BB62867117150D1500133269 /* sailplaneFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sailplaneFactory.h; sourceTree = "<group>"; };
 		BB62867217150D1500133269 /* sailplaneFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sailplaneFactory.m; sourceTree = "<group>"; };
 		BB62867417150D5500133269 /* baseSailplane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseSailplane.h; sourceTree = "<group>"; };
@@ -100,12 +102,11 @@
 		BB10721E1713BA1B00831B37 /* project1 */ = {
 			isa = PBXGroup;
 			children = (
+				BB16A093171DC763003D9E4A /* en.lproj */,
 				BB1072271713BA1B00831B37 /* AppDelegate.h */,
 				BB1072281713BA1B00831B37 /* AppDelegate.m */,
 				BB1072301713BA1B00831B37 /* ViewController.h */,
 				BB1072311713BA1B00831B37 /* ViewController.m */,
-				BB1072331713BA1B00831B37 /* ViewController_iPhone.xib */,
-				BB1072361713BA1B00831B37 /* ViewController_iPad.xib */,
 				BB10721F1713BA1B00831B37 /* Supporting Files */,
 				BB62867117150D1500133269 /* sailplaneFactory.h */,
 				BB62867217150D1500133269 /* sailplaneFactory.m */,
@@ -133,6 +134,16 @@
 				BB10722E1713BA1B00831B37 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB16A093171DC763003D9E4A /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				BB16A094171DC763003D9E4A /* InfoPlist.strings */,
+				BB16A096171DC763003D9E4A /* ViewController_iPad.xib */,
+				BB16A098171DC763003D9E4A /* ViewController_iPhone.xib */,
+			);
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +201,9 @@
 				BB10722B1713BA1B00831B37 /* Default.png in Resources */,
 				BB10722D1713BA1B00831B37 /* Default@2x.png in Resources */,
 				BB10722F1713BA1B00831B37 /* Default-568h@2x.png in Resources */,
-				BB1072351713BA1B00831B37 /* ViewController_iPhone.xib in Resources */,
-				BB1072381713BA1B00831B37 /* ViewController_iPad.xib in Resources */,
+				BB16A09A171DC763003D9E4A /* InfoPlist.strings in Resources */,
+				BB16A09B171DC763003D9E4A /* ViewController_iPad.xib in Resources */,
+				BB16A09C171DC763003D9E4A /* ViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,20 +236,28 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		BB1072331713BA1B00831B37 /* ViewController_iPhone.xib */ = {
+		BB16A094171DC763003D9E4A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BB1072341713BA1B00831B37 /* en */,
+				BB16A095171DC763003D9E4A /* en */,
 			);
-			name = ViewController_iPhone.xib;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		BB1072361713BA1B00831B37 /* ViewController_iPad.xib */ = {
+		BB16A096171DC763003D9E4A /* ViewController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BB1072371713BA1B00831B37 /* en */,
+				BB16A097171DC763003D9E4A /* en */,
 			);
 			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		BB16A098171DC763003D9E4A /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB16A099171DC763003D9E4A /* en */,
+			);
+			name = ViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -306,6 +326,7 @@
 				GCC_PREFIX_HEADER = "project1/project1-Prefix.pch";
 				INFOPLIST_FILE = "project1/project1-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -317,6 +338,7 @@
 				GCC_PREFIX_HEADER = "project1/project1-Prefix.pch";
 				INFOPLIST_FILE = "project1/project1-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -33,7 +33,7 @@
 -(void)calculateFlightTime
 {
     [self setFlightDistance:((2000*self.glideRatio)/5280)];
-    NSLog(@"The flight distance from 2000 feet is %i miles.", flightDistance);
+    
 }
 
 @end
