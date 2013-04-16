@@ -11,7 +11,7 @@
 @implementation doubleSeatSailplane
 
 //create geter and setter methods for each property
-@synthesize pilotCount, flightDistance;
+@synthesize pilotCount;
 
 //customize init
 -(id)init
@@ -32,15 +32,15 @@
 {
     if (pilotCount == ZERO) {
         [self setFlightDistance:(2000*0)];
-        NSLog(@"The flight distance from 2000 feet is %i miles.  It's hard to fly a plane without a pilot.", flightDistance);
+//        NSLog(@"The flight distance from 2000 feet is %i miles.  It's hard to fly a plane without a pilot.", flightDistance);
     }
     else if (pilotCount == ONE) {
         [self setFlightDistance:((2000*self.glideRatio)/5280)+2];
-        NSLog(@"The flight distance from 2000 feet is %i miles.", flightDistance);
+//        NSLog(@"The flight distance from 2000 feet is %i miles.", flightDistance);
     }
     else if (pilotCount == TWO) {
         [self setFlightDistance:((2000*self.glideRatio)/5280)];
-        NSLog(@"The flight distance from 2000 feet is %i miles.", flightDistance);
+//        NSLog(@"The flight distance from 2000 feet is %i miles.", flightDistance);
     }
 }
 @end

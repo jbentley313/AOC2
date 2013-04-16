@@ -11,7 +11,7 @@
 @implementation tripleSeatSailplane
 
 //create geter and setter methods for each property
-@synthesize flyable, flightDistance;
+@synthesize flyable;
 
 //customize init
 -(id)init
@@ -31,7 +31,7 @@
 {
     if (flyable == FLY) {
         [self setFlightDistance:((2000*self.glideRatio)/5280)-1];
-        NSLog(@"The flight distance from 2000 feet is %i miles.", flightDistance);
+//        NSLog(@"The flight distance from 2000 feet is %i miles.", flightDistance);
     }
     else if (flyable == NOFLY) {
         [self setFlightDistance:((2000*self.glideRatio)/5280)*0];

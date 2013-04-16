@@ -1288,11 +1288,11 @@
 						<string key="colorControl">UISegmentedControl</string>
 						<string key="execute">UIButton</string>
 						<string key="spName1">UIButton</string>
-						<string key="spName1Details">UILabel</string>
+						<string key="spName1Details">UITextView</string>
 						<string key="spName2">UIButton</string>
-						<string key="spName2Details">UILabel</string>
+						<string key="spName2Details">UITextView</string>
 						<string key="spName3">UIButton</string>
-						<string key="spName3Details">UILabel</string>
+						<string key="spName3Details">UITextView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="colorControl">
@@ -1309,7 +1309,7 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="spName1Details">
 							<string key="name">spName1Details</string>
-							<string key="candidateClassName">UILabel</string>
+							<string key="candidateClassName">UITextView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="spName2">
 							<string key="name">spName2</string>
@@ -1317,7 +1317,7 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="spName2Details">
 							<string key="name">spName2Details</string>
-							<string key="candidateClassName">UILabel</string>
+							<string key="candidateClassName">UITextView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="spName3">
 							<string key="name">spName3</string>
@@ -1325,7 +1325,7 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="spName3Details">
 							<string key="name">spName3Details</string>
-							<string key="candidateClassName">UILabel</string>
+							<string key="candidateClassName">UITextView</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
