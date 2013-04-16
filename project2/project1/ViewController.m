@@ -56,8 +56,6 @@
                 spName1Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this %@ sailplane will fly %d miles at 2000 feet. Price: %@.", [mini glideRatio], [mini isAerobatic]? @"aerobatic" : @"non-aerobatic", [mini flightDistance], [mini pricePoint] ];
                 spName1Details.textAlignment = NSTextAlignmentLeft;
                 spName1Details.frame = CGRectMake(spName1Details.frame.origin.x, spName1Details.frame.origin.y, 200.0f, 300.0f);
-//                spName1Details.numberOfLines = 0;
-//                [spName1Details sizeToFit];
                 [self.view addSubview:spName1Details];
             }
         } else if (button.tag == 1) {
@@ -80,8 +78,6 @@
                 if (spName2Details != nil) {
                     spName2Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this %@ sailplane will fly %d miles at 2000 feet. Price: %@.", [trainer glideRatio], [trainer isAerobatic]? @"aerobatic" : @"non-aerobatic", [trainer flightDistance], [trainer pricePoint] ];
                     spName2Details.textAlignment = NSTextAlignmentLeft;
-//                    spName2Details.numberOfLines = 0;
-//                    [spName2Details sizeToFit];
                     [self.view addSubview:spName2Details];
                 }
             }
@@ -103,11 +99,26 @@
                     if (spName3Details != nil) {
                         spName3Details.text = [NSString stringWithFormat:@"With a glide ratio of %d:1, this sailplane will fly %d miles at 2000 feet. Price: %@.", [family glideRatio],[family flightDistance], [family pricePoint]];
                         spName3Details.textAlignment = NSTextAlignmentLeft;
-//                        spName3Details.numberOfLines = 0;
-//                        [spName3Details sizeToFit];
                         [self.view addSubview:spName3Details];
                     }
             }
+        }
+    }
+}
+
+-(IBAction)onChange:(id)sender;
+{
+    UISegmentedControl *segmentControl = (UISegmentedControl*)sender;
+    if (segmentControl != nil) {
+        int selectedIndex = segmentControl.selectedSegmentIndex;
+        if (selectedIndex == 0) {
+            self.view.backgroundColor = [UIColor cyanColor];
+        }
+        else if (selectedIndex == 1) {
+            self.view.backgroundColor = [UIColor magentaColor];
+        }
+        else if (selectedIndex == 2) {
+            self.view.backgroundColor = [UIColor greenColor];
         }
     }
 }

@@ -14,6 +14,7 @@
     IBOutlet UIButton *spName1;
     IBOutlet UIButton *spName2;
     IBOutlet UIButton *spName3;
+    IBOutlet UIButton *execute;
     IBOutlet UITextView *spName1Details;
     IBOutlet UITextView *spName2Details;
     IBOutlet UITextView *spName3Details;
@@ -22,4 +23,6 @@
 }
 
 -(IBAction)onClick:(id)sender;
+
+-(IBAction)onChange:(id)sender;
 @end
