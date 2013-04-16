@@ -56,7 +56,11 @@
             spName2.enabled = false;
             spName3.enabled = true;
             
-            spName2Details.text = @"You have chosen a double seat sailplane.";
+            spName1Details.text = @"You have chosen a single seat sailplane. Please choose a glide ratio.";
+            stepControl.hidden = NO;
+            glideStepLabel.hidden = NO;
+            
+            
             
             
         } else if (button.tag == 2) {
@@ -66,8 +70,14 @@
             spName2.enabled = true;
             spName3.enabled = false;
             
-            spName3Details.text = @"You have chosen a triple seat sailplane.";
+            spName1Details.text = @"You have chosen a single seat sailplane. Please choose a glide ratio.";
+            stepControl.hidden = NO;
+            glideStepLabel.hidden = NO;
             
+            
+            //Execute Button Actions
+        } else if (button.tag == 3) {
+            NSLog(@"yep");
         }
     }
 }
