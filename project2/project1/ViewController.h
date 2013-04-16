@@ -17,6 +17,7 @@
     IBOutlet UITextView *spName1Details;
     IBOutlet UITextView *spName2Details;
     IBOutlet UITextView *spName3Details;
+    IBOutlet UISegmentedControl *colorControl;
     
 }
 
