@@ -42,6 +42,10 @@ static glideRatioManager *_instance = nil;
 
 -(void)glideSettings
 {
+    int mini = 1;
+    int doubleS = 2;
+    int family = 3;
+    
     
 }
 

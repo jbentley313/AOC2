@@ -22,6 +22,10 @@
     IBOutlet UISegmentedControl *colorControl;
     IBOutlet UIStepper *stepControl;
     IBOutlet UILabel *glideStepLabel;
+    int buttonClickVal;
+    int currentValue;
+    
+    
     
 }
 

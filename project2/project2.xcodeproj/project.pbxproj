@@ -112,8 +112,9 @@
 				BB1072281713BA1B00831B37 /* AppDelegate.m */,
 				BB1072301713BA1B00831B37 /* ViewController.h */,
 				BB1072311713BA1B00831B37 /* ViewController.m */,
-				BB1072331713BA1B00831B37 /* ViewController_iPhone.xib */,
 				BB1072361713BA1B00831B37 /* ViewController_iPad.xib */,
+				BB1072331713BA1B00831B37 /* ViewController_iPhone.xib */,
+				BB18420F171E292B00228F12 /* infoView.xib */,
 				BB10721F1713BA1B00831B37 /* Supporting Files */,
 				BB62867117150D1500133269 /* sailplaneFactory.h */,
 				BB62867217150D1500133269 /* sailplaneFactory.m */,
@@ -129,7 +130,6 @@
 				BBDCF0CC171CF9CF001D2429 /* glideRatioManager.m */,
 				BB18420C171E201900228F12 /* InfoViewController.h */,
 				BB18420D171E201900228F12 /* InfoViewController.m */,
-				BB18420F171E292B00228F12 /* infoView.xib */,
 			);
 			name = project2;
 			path = project1;
