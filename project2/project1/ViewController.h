@@ -15,6 +15,7 @@
     IBOutlet UIButton *spName2;
     IBOutlet UIButton *spName3;
     IBOutlet UIButton *execute;
+    IBOutlet UIButton *infoButton;
     IBOutlet UITextView *spName1Details;
     IBOutlet UITextView *spName2Details;
     IBOutlet UITextView *spName3Details;

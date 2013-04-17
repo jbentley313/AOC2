@@ -9,6 +9,7 @@
 
 #import "ViewController.h"
 #import "glideRatioManager.h"
+#import "InfoViewController.h"
 
 @interface ViewController ()
 
@@ -78,6 +79,13 @@
             //Execute Button Actions
         } else if (button.tag == 3) {
             NSLog(@"yep");
+            
+            //Info Button Actions
+        } else if (button.tag == 4) {
+            InfoViewController *infoView = [[InfoViewController alloc] initWithNibName:@"infoView" bundle:nil];
+            if (infoView !=nil) {
+                [self presentViewController:infoView animated:YES completion:nil];
+            }
         }
     }
 }
