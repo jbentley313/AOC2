@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB752A351721A60900904214 /* addViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB752A341721A60900904214 /* addViewController.m */; };
 		BB8D3BF81720F9C4004BE4B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8D3BF71720F9C4004BE4B6 /* UIKit.framework */; };
 		BB8D3BFA1720F9C4004BE4B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8D3BF91720F9C4004BE4B6 /* Foundation.framework */; };
 		BB8D3BFC1720F9C4004BE4B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8D3BFB1720F9C4004BE4B6 /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB752A331721A60900904214 /* addViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addViewController.h; sourceTree = "<group>"; };
+		BB752A341721A60900904214 /* addViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addViewController.m; sourceTree = "<group>"; };
 		BB8D3BF41720F9C4004BE4B6 /* project3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8D3BF71720F9C4004BE4B6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BB8D3BF91720F9C4004BE4B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +95,8 @@
 				BB8D3C121720F9C4004BE4B6 /* ViewController.xib */,
 				BB8D3C1A1720FB4F004BE4B6 /* addView.xib */,
 				BB8D3BFE1720F9C4004BE4B6 /* Supporting Files */,
+				BB752A331721A60900904214 /* addViewController.h */,
+				BB752A341721A60900904214 /* addViewController.m */,
 			);
 			path = project3;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				BB8D3C041720F9C4004BE4B6 /* main.m in Sources */,
 				BB8D3C081720F9C4004BE4B6 /* AppDelegate.m in Sources */,
 				BB8D3C111720F9C4004BE4B6 /* ViewController.m in Sources */,
+				BB752A351721A60900904214 /* addViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +306,7 @@
 				BB8D3C191720F9C4004BE4B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

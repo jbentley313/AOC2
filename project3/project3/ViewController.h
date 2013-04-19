@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    IBOutlet UIButton *addBtn;
+}
+
+-(IBAction)onClick:(id)sender;
 
 @end
