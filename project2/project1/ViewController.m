@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  project1
+//  project2
 //  AOC2 1304 Jason Bentley
 //
 //  Created by theOwner on 4/8/13.
@@ -139,7 +139,7 @@
                     }
                 }
             }
-            stepControl.value = 19;
+//            stepControl.value = 19;
             
             
             //Info Button Actions
@@ -173,6 +173,7 @@
 {
     stepControl = (UIStepper*)sender;
     if (stepControl != nil) {
+        execute.hidden = NO;
         currentValue = stepControl.value;
         spName1Details.text = [NSString stringWithFormat:@"Glide ratio: %d", currentValue];
     }
