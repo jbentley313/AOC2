@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 {
+    
+    IBOutlet UITextView *eventView;
     IBOutlet UIButton *addBtn;
 }
 

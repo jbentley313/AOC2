@@ -35,4 +35,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)onClick:(id)sender;
+{
+    UIButton *button = (UIButton*)sender;
+    if (button !=nil) {
+        if (button.tag == 0) {
+            [eventText resignFirstResponder];
+        }
+    } else if (button.tag == 1) {
+        NSString *tempString = eventText.text;
+        
+    }
+    
+}
+
 @end
