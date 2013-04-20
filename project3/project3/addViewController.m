@@ -38,6 +38,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+//button actions 
 -(IBAction)onClick2:(id)sender;
 {
     UIButton *button = (UIButton*)sender;
@@ -45,14 +47,33 @@
         if (button.tag == 0) {
             [eventText resignFirstResponder];
         } else if (button.tag ==1) {
-            [self dismissViewControllerAnimated:YES completion:nil];
+            
             if (delegate !=nil) {
                 [delegate didClose:eventText.text];
+
+                [self dismissViewControllerAnimated:YES completion:nil];
             }
         }
     }
+    
 }
 
+-(IBAction)onChange:(id)sender;
+{
+    UIDatePicker *datePicked = (UIDatePicker*)sender;
+    if (datePicked !=nil) {
+        NSDate *dateNS = datePicked.date;
+        NSDateFormatter *formattedDate = [[NSDateFormatter alloc] init];
+        [formattedDate setDateFormat:@"E MMM dd, yyyy 'at' hh:mm a"];
+        NSString *dateString = [formattedDate stringFromDate:dateNS];
+        [delegate didClose:dateString];
+        
+        
+    }
+}
+
+
+//call didClose on keyboard Return Key
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self dismissViewControllerAnimated:YES completion:nil];
