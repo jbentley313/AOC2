@@ -30,7 +30,7 @@
 
 -(void)didClose:(NSString *)nameString;
 {
-    eventView.text = nameString;
+    eventView.text = [eventView.text stringByAppendingFormat: @"\n%@", nameString];
 }
 
 -(IBAction)onClick:(id)sender;

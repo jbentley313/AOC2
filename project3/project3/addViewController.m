@@ -53,6 +53,15 @@
     }
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    if (delegate !=nil) {
+        [delegate didClose:eventText.text];
+    }
+    return true;
+}
+
 // - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 //{
 //    return true;
