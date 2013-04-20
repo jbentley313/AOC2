@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad
 {
-//    eventView.text = 
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -28,7 +28,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+-(void)didClose:(NSString *)nameString;
+{
+    eventView.text = nameString;
+}
 
 -(IBAction)onClick:(id)sender;
 {
@@ -38,6 +41,7 @@
     if (button != nil) {
         if (button.tag == 0) {
             if (addView !=nil) {
+                addView.delegate = self;
                 [self presentViewController:addView animated:YES completion:nil];
             }
         } 

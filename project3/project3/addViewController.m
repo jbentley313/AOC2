@@ -13,6 +13,7 @@
 @end
 
 @implementation addViewController
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,6 +26,8 @@
 
 - (void)viewDidLoad
 {
+   
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -35,18 +38,30 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)onClick:(id)sender;
+-(IBAction)onClick2:(id)sender;
 {
     UIButton *button = (UIButton*)sender;
     if (button !=nil) {
         if (button.tag == 0) {
             [eventText resignFirstResponder];
+        } else if (button.tag ==1) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+            if (delegate !=nil) {
+                [delegate didClose:eventText.text];
+            }
         }
-    } else if (button.tag == 1) {
-        NSString *tempString = eventText.text;
-        
     }
-    
 }
+
+// - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+//{
+//    return true;
+//}
+//
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField
+//{
+//    [self dismissViewControllerAnimated:YES completion:Nil];
+//    return true;
+//}
 
 @end

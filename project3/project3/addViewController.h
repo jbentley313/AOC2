@@ -8,11 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface addViewController : UIViewController
+@protocol addViewDelegate <NSObject>
+
+
+-(void)didClose:(NSString*)nameString;
+
+@end
+
+@interface addViewController : UIViewController <UITextFieldDelegate>
 {
-    IBOutlet UIButton *closekeyb;
-    IBOutlet UITextField *eventText;
+        IBOutlet UITextField *eventText;
+        id<addViewDelegate> delegate;
 }
--(IBAction)onClick:(id)sender;
+
+@property (strong) id<addViewDelegate> delegate;
+
+-(IBAction)onClick2:(id)sender;
+
+
+
 
 @end
