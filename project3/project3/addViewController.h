@@ -17,8 +17,10 @@
 
 @interface addViewController : UIViewController <UITextFieldDelegate> 
 {
-        IBOutlet UITextField *eventText;
-        
+    IBOutlet UITextField *eventText;
+    IBOutlet UIButton *saveBtn;
+    IBOutlet UIButton *closeKeyBtn;
+    
         id<addViewDelegate> delegate;
 }
 

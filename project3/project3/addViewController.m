@@ -50,6 +50,7 @@
             
             if (delegate !=nil) {
                 [delegate didClose:eventText.text];
+                [delegate didClose:@"\n"];
 
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
@@ -58,13 +59,15 @@
     
 }
 
+
+//Date picker onChange actions
 -(IBAction)onChange:(id)sender;
 {
     UIDatePicker *datePicked = (UIDatePicker*)sender;
     if (datePicked !=nil) {
         NSDate *dateNS = datePicked.date;
         NSDateFormatter *formattedDate = [[NSDateFormatter alloc] init];
-        [formattedDate setDateFormat:@"E MMM dd, yyyy 'at' hh:mm a"];
+        [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
         NSString *dateString = [formattedDate stringFromDate:dateNS];
         [delegate didClose:dateString];
         
@@ -83,10 +86,15 @@
     return true;
 }
 
-// - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-//{
+//
+ - (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    saveBtn.hidden = NO;
+    closeKeyBtn.hidden = NO;
 //    return true;
-//}
+}
+
+
 //
 //- (BOOL)textFieldShouldReturn:(UITextField *)textField
 //{
