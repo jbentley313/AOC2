@@ -64,9 +64,10 @@
         NSDateFormatter *formattedDate = [[NSDateFormatter alloc] init];
         [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
         NSString *dateString = [formattedDate stringFromDate:dateNS];
-        [delegate didClose:dateString];
+        
         
     /////////calling this here makes multiple date values for every "turn" of the picker.  Not sure where to call this
+        [delegate didClose:dateString];
         
     }
 }
