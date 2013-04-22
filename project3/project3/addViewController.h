@@ -21,10 +21,18 @@
     IBOutlet UIButton *saveBtn;
     IBOutlet UIButton *closeKeyBtn;
     
+    
+   
+   
+   
+    
+    
         id<addViewDelegate> delegate;
 }
 
 @property (strong) id<addViewDelegate> delegate;
+
+
 
 -(IBAction)onClick2:(id)sender;
 

@@ -15,6 +15,7 @@
 @implementation addViewController
 @synthesize delegate;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,8 +27,6 @@
 
 - (void)viewDidLoad
 {
-   
-    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -47,16 +46,11 @@
         if (button.tag == 0) {
             [eventText resignFirstResponder];
         } else if (button.tag ==1) {
-            
-            if (delegate !=nil) {
                 [delegate didClose:eventText.text];
-                [delegate didClose:@"\n"];
-
+        
                 [self dismissViewControllerAnimated:YES completion:nil];
-            }
         }
     }
-    
 }
 
 
@@ -65,24 +59,24 @@
 {
     UIDatePicker *datePicked = (UIDatePicker*)sender;
     if (datePicked !=nil) {
+        
         NSDate *dateNS = datePicked.date;
         NSDateFormatter *formattedDate = [[NSDateFormatter alloc] init];
         [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
         NSString *dateString = [formattedDate stringFromDate:dateNS];
         [delegate didClose:dateString];
         
+    /////////calling this here makes multiple date values for every "turn" of the picker.  Not sure where to call this
         
     }
 }
 
 
-//call didClose on keyboard Return Key
+//close keyboard on keyboard Return Key
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
-    if (delegate !=nil) {
-        [delegate didClose:eventText.text];
-    }
+    [eventText resignFirstResponder];
+    
     return true;
 }
 
@@ -91,7 +85,6 @@
 {
     saveBtn.hidden = NO;
     closeKeyBtn.hidden = NO;
-//    return true;
 }
 
 
