@@ -31,11 +31,9 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
+
 
 
 //button actions 
@@ -47,7 +45,7 @@
             [eventText resignFirstResponder];
         } else if (button.tag ==1) {
                 [delegate didClose:eventText.text];
-        
+                [delegate didClose:dateString];
                 [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
@@ -63,12 +61,7 @@
         NSDate *dateNS = datePicked.date;
         NSDateFormatter *formattedDate = [[NSDateFormatter alloc] init];
         [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
-        NSString *dateString = [formattedDate stringFromDate:dateNS];
-        
-        
-    /////////calling this here makes multiple date values for every "turn" of the picker.  Not sure where to call this
-        [delegate didClose:dateString];
-        
+        dateString = [formattedDate stringFromDate:dateNS];
     }
 }
 
@@ -86,8 +79,14 @@
 {
     saveBtn.hidden = NO;
     closeKeyBtn.hidden = NO;
+   
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 //
 //- (BOOL)textFieldShouldReturn:(UITextField *)textField
