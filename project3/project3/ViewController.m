@@ -36,6 +36,8 @@
    
 }
 
+
+//add event button
 -(IBAction)onClick:(id)sender;
 {
     UIButton *button = (UIButton*)sender;
