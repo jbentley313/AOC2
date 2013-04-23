@@ -48,10 +48,13 @@
         if (button.tag == 0) {
             [eventText resignFirstResponder];
         } else if (button.tag ==1) {
+            if (eventText.text == nil) {
+               //alert
+            }
             //call didClose with eventText and dateString
                 [delegate didClose:eventText.text];
                 [delegate didClose:dateString];
-            [delegate didClose:@"\n"];
+                [delegate didClose:@"\n"];
                 [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
