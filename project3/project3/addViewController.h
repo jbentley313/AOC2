@@ -20,18 +20,14 @@
     IBOutlet UITextField *eventText;
     IBOutlet UIButton *saveBtn;
     IBOutlet UIButton *closeKeyBtn;
-    NSString *dateString;
-    
-   
-   
-   
-    
+  
+//    NSString *dateString;
     
         id<addViewDelegate> delegate;
 }
 
 @property (strong) id<addViewDelegate> delegate;
-
+@property (retain, nonatomic) NSString *dateString;
 
 
 -(IBAction)onClick2:(id)sender;

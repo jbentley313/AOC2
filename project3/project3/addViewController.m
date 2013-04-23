@@ -14,6 +14,8 @@
 
 @implementation addViewController
 @synthesize delegate;
+@synthesize dateString;
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -27,11 +29,15 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
 
-
+- (void)viewDidDisappear{
+    [delegate didClose:dateString];
+    [super viewDidDisappear:YES];
+}
 
 
 
@@ -61,7 +67,9 @@
         NSDate *dateNS = datePicked.date;
         NSDateFormatter *formattedDate = [[NSDateFormatter alloc] init];
         [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
-        dateString = [formattedDate stringFromDate:dateNS];
+        NSString *dateString2 = [formattedDate stringFromDate:dateNS];
+        [self setDateString:dateString2];
+        NSLog(@"%@", dateString2);
     }
 }
 
