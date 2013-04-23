@@ -34,10 +34,7 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)viewDidDisappear{
-    [delegate didClose:dateString];
-    [super viewDidDisappear:YES];
-}
+
 
 
 
@@ -47,11 +44,14 @@
 {
     UIButton *button = (UIButton*)sender;
     if (button !=nil) {
+        //close keyboard
         if (button.tag == 0) {
             [eventText resignFirstResponder];
         } else if (button.tag ==1) {
+            //call didClose with eventText and dateString
                 [delegate didClose:eventText.text];
                 [delegate didClose:dateString];
+            [delegate didClose:@"\n"];
                 [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
@@ -63,13 +63,11 @@
 {
     UIDatePicker *datePicked = (UIDatePicker*)sender;
     if (datePicked !=nil) {
-        
         NSDate *dateNS = datePicked.date;
         NSDateFormatter *formattedDate = [[NSDateFormatter alloc] init];
         [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
         NSString *dateString2 = [formattedDate stringFromDate:dateNS];
         [self setDateString:dateString2];
-        NSLog(@"%@", dateString2);
     }
 }
 
@@ -82,7 +80,7 @@
     return true;
 }
 
-//
+//unhide save button and close keyboard on editing
  - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     saveBtn.hidden = NO;

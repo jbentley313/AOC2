@@ -32,7 +32,7 @@
 -(void)didClose:(NSString *)nameString;
 {
     eventView.text = [eventView.text stringByAppendingFormat: @"\n%@", nameString];
-    NSLog(@"%@", nameString);
+    NSLog(@"from didClose: %@", nameString);
    
 }
 
