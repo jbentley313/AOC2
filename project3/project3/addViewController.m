@@ -66,6 +66,7 @@
 {
     UIDatePicker *datePicked = (UIDatePicker*)sender;
     if (datePicked !=nil) {
+        [datePicked setMinimumDate:[NSDate date]];
         NSDate *dateNS = datePicked.date;
         NSDateFormatter *formattedDate = [[NSDateFormatter alloc] init];
         [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
