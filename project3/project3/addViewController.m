@@ -48,30 +48,54 @@
         if (button.tag == 0) {
             [eventText resignFirstResponder];
         } else if (button.tag ==1) {
-            if (eventText.text == nil) {
-               //alert
-            }
-            //call didClose with eventText and dateString
+            if (eventText.text.length > 0) {
+                //call didClose with eventText and dateString
                 [delegate didClose:eventText.text];
-                [delegate didClose:dateString];
-                [delegate didClose:@"\n"];
-                [self dismissViewControllerAnimated:YES completion:nil];
+                
+                //use today's date if none picked
+                if (dateString == nil) {
+                    formattedDate = [[NSDateFormatter alloc] init];
+                    [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
+                    
+                    NSString *todaysDate = [formattedDate stringFromDate:[NSDate date]];
+                    [self setDateString:todaysDate];
+                    [delegate didClose:dateString];
+                    [delegate didClose:@"\n"];
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                    
+                    //use picked date
+                } else if (dateString != nil) {
+                    [delegate didClose:dateString];
+                    [delegate didClose:@"\n"];
+                    [self dismissViewControllerAnimated:YES completion:nil];
+
+                }
+            }
         }
     }
 }
 
 
+
+
 //Date picker onChange actions
 -(IBAction)onChange:(id)sender;
 {
+   
+    formattedDate = [[NSDateFormatter alloc] init];
+    [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
+    
     UIDatePicker *datePicked = (UIDatePicker*)sender;
     if (datePicked !=nil) {
+        //set min date to today
         [datePicked setMinimumDate:[NSDate date]];
+        
         NSDate *dateNS = datePicked.date;
-        NSDateFormatter *formattedDate = [[NSDateFormatter alloc] init];
-        [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
+       
         NSString *dateString2 = [formattedDate stringFromDate:dateNS];
-        [self setDateString:dateString2];
+        if (dateString2 != nil) {
+            [self setDateString:dateString2];
+        }
     }
 }
 

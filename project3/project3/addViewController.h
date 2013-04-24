@@ -20,6 +20,7 @@
     IBOutlet UITextField *eventText;
     IBOutlet UIButton *saveBtn;
     IBOutlet UIButton *closeKeyBtn;
+    NSDateFormatter *formattedDate;
   
 //    NSString *dateString;
     
