@@ -29,11 +29,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+//didClose
 -(void)didClose:(NSString *)nameString;
 {
-    eventView.text = [eventView.text stringByAppendingFormat: @"\n%@", nameString];
-    NSLog(@"from didClose: %@", nameString);
-   
+    //'erase' default text in eventView
+    if ([eventView.text isEqual: @"Added events will go here..."]) {
+        eventView.text = @"";
+    }
+    //set eventView text to updated user input
+        eventView.text = [eventView.text stringByAppendingFormat: @"\n%@", nameString];
 }
 
 
@@ -51,8 +55,6 @@
             }
         } 
     }
-    
-    
 }
 
 
