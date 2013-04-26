@@ -43,12 +43,18 @@
 -(IBAction)onClick2:(id)sender;
 {
     UIButton *button = (UIButton*)sender;
+    
     if (button !=nil) {
         //close keyboard
         if (button.tag == 0) {
             [eventText resignFirstResponder];
-        } else if (button.tag ==1) {
-            if (eventText.text.length > 0) {
+        //save button
+        } else if (button.tag == 1) {
+            if (eventText.text.length < 1) {
+                //alert string if empty
+                NSString *message = @"please enter a name for the event";
+                [self DisplayAlertWithString:message];
+            } else if (eventText.text.length > 0) {
                 //call didClose with eventText and dateString
                 [delegate didClose:eventText.text];
                 
@@ -56,7 +62,6 @@
                 if (dateString == nil) {
                     formattedDate = [[NSDateFormatter alloc] init];
                     [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
-                    
                     NSString *todaysDate = [formattedDate stringFromDate:[NSDate date]];
                     [self setDateString:todaysDate];
                     [delegate didClose:dateString];
@@ -68,9 +73,11 @@
                     [delegate didClose:dateString];
                     [delegate didClose:@"\n"];
                     [self dismissViewControllerAnimated:YES completion:nil];
-
                 }
             }
+        //cancel button
+        } else if (button.tag == 2) {
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
 }
@@ -122,11 +129,27 @@
     closeKeyBtn.hidden = YES;
 }
 
+
+//alert
+-(void)DisplayAlertWithString:(NSString*)alert
+{
+    UIAlertView *alertViewMsg = [[UIAlertView alloc] initWithTitle:@"Alert" message:alert delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+    if (alertViewMsg != nil) {
+        [alertViewMsg show];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+
+
 
 //
 //- (BOOL)textFieldShouldReturn:(UITextField *)textField

@@ -20,7 +20,9 @@
     IBOutlet UITextField *eventText;
     IBOutlet UIButton *saveBtn;
     IBOutlet UIButton *closeKeyBtn;
+    IBOutlet UIButton *cancelBtn;
     NSDateFormatter *formattedDate;
+    
     
         id<addViewDelegate> delegate;
 }
@@ -33,6 +35,9 @@
 
 
 -(IBAction)onChange:(id)sender;
+
+
+-(void)DisplayAlertWithString:(NSString*)alert;
 
 
 @end
