@@ -116,6 +116,12 @@
    
 }
 
+//hide close keyboard button when done editing
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    closeKeyBtn.hidden = YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
