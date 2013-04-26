@@ -48,6 +48,7 @@
         //close keyboard
         if (button.tag == 0) {
             [eventText resignFirstResponder];
+            
         //save button
         } else if (button.tag == 1) {
             if (eventText.text.length < 1) {
@@ -68,7 +69,7 @@
                     [delegate didClose:@"\n"];
                     [self dismissViewControllerAnimated:YES completion:nil];
                     
-                    //use picked date
+                //use picked date
                 } else if (dateString != nil) {
                     [delegate didClose:dateString];
                     [delegate didClose:@"\n"];
