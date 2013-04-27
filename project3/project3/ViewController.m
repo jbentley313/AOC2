@@ -35,11 +35,11 @@
     //'erase' default text in eventView
     if ([eventView.text isEqual: @"Added events will go here..."]) {
         eventView.text = @"";
-    }
+    } 
     //set eventView text to updated user input
         eventView.text = [eventView.text stringByAppendingFormat: @"\n%@", nameString];
+    
 }
-
 
 //add event button
 -(IBAction)onClick:(id)sender;
