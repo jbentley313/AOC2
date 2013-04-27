@@ -8,6 +8,7 @@
 
 #import "AddEventViewController.h"
 
+
 @interface AddEventViewController ()
 
 @end
@@ -23,12 +24,31 @@
     return self;
 }
 
+
+-(void)viewWillAppear:(BOOL)animated;
+{
+    leftSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
+    leftSwiper.direction = UISwipeGestureRecognizerDirectionLeft;
+    [swipeLeftLabel addGestureRecognizer:leftSwiper];
+    
+    [super viewWillAppear:animated];
+}
+
+
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
 
+-(void)onSwipe:(UISwipeGestureRecognizer*)recognizer
+{
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

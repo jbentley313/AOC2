@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AddEventViewController : UIViewController
-
+{
+    UISwipeGestureRecognizer *leftSwiper;
+    IBOutlet UILabel *swipeLeftLabel;
+}
 @end

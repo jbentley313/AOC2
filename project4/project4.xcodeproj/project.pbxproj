@@ -89,14 +89,14 @@
 			isa = PBXGroup;
 			children = (
 				BBE41468172B7DE100DEF1A8 /* AppDelegate.h */,
-				BBE4147C172B7E9800DEF1A8 /* addEventView.xib */,
 				BBE41469172B7DE100DEF1A8 /* AppDelegate.m */,
 				BBE41471172B7DE100DEF1A8 /* ViewController.h */,
 				BBE41472172B7DE100DEF1A8 /* ViewController.m */,
 				BBE41474172B7DE100DEF1A8 /* ViewController.xib */,
-				BBE41460172B7DE100DEF1A8 /* Supporting Files */,
+				BBE4147C172B7E9800DEF1A8 /* addEventView.xib */,
 				BBE4147E172B85DA00DEF1A8 /* AddEventViewController.h */,
 				BBE4147F172B85DA00DEF1A8 /* AddEventViewController.m */,
+				BBE41460172B7DE100DEF1A8 /* Supporting Files */,
 			);
 			path = project4;
 			sourceTree = "<group>";
