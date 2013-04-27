@@ -12,6 +12,7 @@
 {
     UISwipeGestureRecognizer *leftSwiper;
     IBOutlet UILabel *swipeLeftLabel;
+    IBOutlet UITextField *eventText;
 }
 
 -(IBAction)onChange:(id)sender;

@@ -27,10 +27,11 @@
 
 -(void)viewWillAppear:(BOOL)animated;
 {
-    leftSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
-    leftSwiper.direction = UISwipeGestureRecognizerDirectionLeft;
-    [swipeLeftLabel addGestureRecognizer:leftSwiper];
-    
+    if (swipeLeftLabel != nil) {
+        leftSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
+        leftSwiper.direction = UISwipeGestureRecognizerDirectionLeft;
+        [swipeLeftLabel addGestureRecognizer:leftSwiper];
+    }
     [super viewWillAppear:animated];
 }
 
@@ -40,6 +41,25 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+
+//onClick button
+-(void)onClick:(id)sender;
+{
+    UIButton *button = (UIButton*)sender;
+    if (button !=nil) {
+        //close keyboard
+        if (button.tag == 0) {
+            [eventText resignFirstResponder];
+        }
+    }
+}
+
+//date picker
+-(IBAction)onChange:(id)sender;
+{
+    
 }
 
 -(void)onSwipe:(UISwipeGestureRecognizer*)recognizer
