@@ -13,6 +13,7 @@
     UISwipeGestureRecognizer *leftSwiper;
     IBOutlet UILabel *swipeLeftLabel;
     IBOutlet UITextField *eventText;
+    NSDateFormatter *formattedDate;
 }
 
 -(IBAction)onChange:(id)sender;

@@ -60,15 +60,33 @@
 -(IBAction)onChange:(id)sender;
 {
     
+    formattedDate = [[NSDateFormatter alloc] init];
+    [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
+    
+    UIDatePicker *datePicked = (UIDatePicker*)sender;
+    if (datePicked !=nil) {
+        //set min date to today
+        [datePicked setMinimumDate:[NSDate date]];
+        
+        NSDate *dateNS = datePicked.date;
+        //format dateString2
+        NSString *dateString2 = [formattedDate stringFromDate:dateNS];
+        if (dateString2 != nil) {
+            
+        }
+    }
 }
+
 
 -(void)onSwipe:(UISwipeGestureRecognizer*)recognizer
 {
     if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }
-
+    
 }
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
