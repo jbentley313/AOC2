@@ -1,4 +1,4 @@
-//
+;//
 //  AddEventViewController.h
 //  project4
 //
@@ -13,4 +13,9 @@
     UISwipeGestureRecognizer *leftSwiper;
     IBOutlet UILabel *swipeLeftLabel;
 }
+
+-(IBAction)onChange:(id)sender;
+
+-(IBAction)onClick:(id)sender;
+
 @end
