@@ -22,7 +22,7 @@
 - (void)viewDidLoad
 {
     [textDateManager CreateInstance];
-
+    
     
     
     [super viewDidLoad];
@@ -45,7 +45,7 @@
     NSString *textFromSingleton = [[textDateManager GetInstance] passedText];
     NSString *dateFromSingleton = [[textDateManager GetInstance] passedDate];
     if (textFromSingleton != nil) {
-        textViewDisplay.text = [textViewDisplay.text stringByAppendingFormat:@"\n%@\n %@", textFromSingleton, dateFromSingleton];
+        textViewDisplay.text = [textViewDisplay.text stringByAppendingFormat:@"\n%@\n%@\n", textFromSingleton, dateFromSingleton];
     }
 }
 
