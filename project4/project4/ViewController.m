@@ -41,8 +41,8 @@
     [swipeRightLabel addGestureRecognizer:rightSwiper];
     [super viewWillAppear:animated];
     
-    NSString *this = [[textDateManager GetInstance] passedText];
-    [textViewDisplay setText:this];
+    NSString *textFromSingleton = [[textDateManager GetInstance] passedText];
+    textViewDisplay.text = [textViewDisplay.text stringByAppendingFormat:@"\n%@", textFromSingleton];
 }
 
 
