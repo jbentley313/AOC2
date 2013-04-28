@@ -21,6 +21,11 @@
 
 -(IBAction)onClick:(id)sender;
 
+
+
 @property (strong) NSString *passedText;
+@property (retain, nonatomic)  NSString *dateString;
+
+-(void)DisplayAlertWithString:(NSString*)alert;
 
 @end

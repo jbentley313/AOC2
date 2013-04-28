@@ -16,7 +16,10 @@
 +(void)CreateInstance;
 +(textDateManager*)GetInstance;
 -(NSString*)printSettings:(NSString*)passedString;
+-(NSString*)dateSettings:(NSString*)passedDateString;
 
 @property (nonatomic, strong) NSString *passedText;
+@property (nonatomic, strong) NSString *passedDate;
+
 
 @end

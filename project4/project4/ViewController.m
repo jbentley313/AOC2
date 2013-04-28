@@ -43,8 +43,9 @@
     
     //data passed from Singleton textDateManager
     NSString *textFromSingleton = [[textDateManager GetInstance] passedText];
+    NSString *dateFromSingleton = [[textDateManager GetInstance] passedDate];
     if (textFromSingleton != nil) {
-        textViewDisplay.text = [textViewDisplay.text stringByAppendingFormat:@"\n%@", textFromSingleton];
+        textViewDisplay.text = [textViewDisplay.text stringByAppendingFormat:@"\n%@\n %@", textFromSingleton, dateFromSingleton];
     }
 }
 
@@ -86,8 +87,7 @@
     if (button != nil) {
         //save button
         if (button.tag == 0) {
-//            NSString *this = [[textDateManager GetInstance] passedText];
-//            [textViewDisplay setText:this];
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         }
     }
     

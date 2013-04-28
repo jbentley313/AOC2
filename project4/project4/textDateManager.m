@@ -11,6 +11,7 @@
 
 @implementation textDateManager
 @synthesize passedText;
+@synthesize passedDate;
 
 
 static textDateManager *_instance = nil;
@@ -43,6 +44,12 @@ static textDateManager *_instance = nil;
     NSLog(@"from singleton %@", passedString);
     [self setPassedText:passedString];
     return passedText;
+}
+
+-(NSString*)dateSettings:(NSString*)passedDateString;
+{
+    [self setPassedDate:passedDateString];
+    return passedDate;
 }
 
 @end
