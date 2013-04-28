@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB38D6DB172C95DD00E4A574 /* textDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB38D6DA172C95DD00E4A574 /* textDateManager.m */; };
 		BBE4145A172B7DE100DEF1A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE41459172B7DE100DEF1A8 /* UIKit.framework */; };
 		BBE4145C172B7DE100DEF1A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE4145B172B7DE100DEF1A8 /* Foundation.framework */; };
 		BBE4145E172B7DE100DEF1A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE4145D172B7DE100DEF1A8 /* CoreGraphics.framework */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB38D6D9172C95DD00E4A574 /* textDateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textDateManager.h; sourceTree = "<group>"; };
+		BB38D6DA172C95DD00E4A574 /* textDateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textDateManager.m; sourceTree = "<group>"; };
 		BBE41456172B7DE100DEF1A8 /* project4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE41459172B7DE100DEF1A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BBE4145B172B7DE100DEF1A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +100,8 @@
 				BBE4147E172B85DA00DEF1A8 /* AddEventViewController.h */,
 				BBE4147F172B85DA00DEF1A8 /* AddEventViewController.m */,
 				BBE41460172B7DE100DEF1A8 /* Supporting Files */,
+				BB38D6D9172C95DD00E4A574 /* textDateManager.h */,
+				BB38D6DA172C95DD00E4A574 /* textDateManager.m */,
 			);
 			path = project4;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				BBE4146A172B7DE100DEF1A8 /* AppDelegate.m in Sources */,
 				BBE41473172B7DE100DEF1A8 /* ViewController.m in Sources */,
 				BBE41480172B85DA00DEF1A8 /* AddEventViewController.m in Sources */,
+				BB38D6DB172C95DD00E4A574 /* textDateManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +312,7 @@
 				BBE4147B172B7DE100DEF1A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

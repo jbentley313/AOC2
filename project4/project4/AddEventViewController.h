@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "textDateManager.h"
 
 @interface AddEventViewController : UIViewController
 {
@@ -19,5 +20,7 @@
 -(IBAction)onChange:(id)sender;
 
 -(IBAction)onClick:(id)sender;
+
+@property (strong) NSString *passedText;
 
 @end

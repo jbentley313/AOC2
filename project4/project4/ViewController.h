@@ -14,8 +14,10 @@
     IBOutlet UIButton *saveBtn;
     IBOutlet UILabel *swipeRightLabel;
     UISwipeGestureRecognizer *rightSwiper;
+    IBOutlet UITextView *textViewDisplay;
 }
 
 -(IBAction)onClick:(id)sender;
+
 
 @end

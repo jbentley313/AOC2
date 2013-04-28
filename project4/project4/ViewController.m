@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AddEventViewController.h"
+#import "textDateManager.h"
 
 @interface ViewController ()
 
@@ -15,11 +16,23 @@
 
 @implementation ViewController
 
+
+
+
 - (void)viewDidLoad
 {
+    [textDateManager CreateInstance];
+    [[textDateManager GetInstance]passedText];
+
+    
+    [textViewDisplay setText:[[textDateManager GetInstance] passedText]];
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+
 
 -(void)viewWillAppear:(BOOL)animated;
 {
@@ -50,12 +63,21 @@
     
 }
 
+-(void)setdText
+{
+    [textViewDisplay setText:[[textDateManager GetInstance] passedText]];
+    NSString *this = [[textDateManager GetInstance] passedText];
+    [textViewDisplay setText:this];
+}
+
+
 -(IBAction)onClick:(id)sender
 {
     UIButton *button = (UIButton*)sender;
     if (button != nil) {
         if (button.tag == 0) {
-            
+//            NSString *this = [[textDateManager GetInstance] passedText];
+//            [textViewDisplay setText:this];
         }
     }
     

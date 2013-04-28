@@ -7,13 +7,14 @@
 //
 
 #import "AddEventViewController.h"
-
+#import "textDateManager.h"
 
 @interface AddEventViewController ()
 
 @end
 
 @implementation AddEventViewController
+@synthesize passedText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -81,6 +82,10 @@
 -(void)onSwipe:(UISwipeGestureRecognizer*)recognizer
 {
     if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+       
+        [[textDateManager GetInstance] printSettings:eventText.text ];
+        NSLog(@"the text from addVC is %@", eventText.text);
+        
         [self dismissViewControllerAnimated:YES completion:nil];
     }
     
