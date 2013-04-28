@@ -24,7 +24,10 @@ static textDateManager *_instance = nil;
 
 +(textDateManager*)GetInstance
 {
-    return _instance;
+    if (_instance != nil) {
+        return _instance;
+    }
+    return nil;
 }
 
 +(id)alloc

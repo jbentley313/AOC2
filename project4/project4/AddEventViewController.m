@@ -29,6 +29,7 @@
 
 -(void)viewWillAppear:(BOOL)animated;
 {
+    //swipe left instantiation
     if (swipeLeftLabel != nil) {
         leftSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
         leftSwiper.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -61,7 +62,7 @@
 //date picker
 -(IBAction)onChange:(id)sender;
 {
-    
+    //format date
     formattedDate = [[NSDateFormatter alloc] init];
     [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
     
@@ -79,14 +80,15 @@
     }
 }
 
-
+//swipe left
 -(void)onSwipe:(UISwipeGestureRecognizer*)recognizer
 {
     if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
-       
+       //get data from singleton
         [[textDateManager GetInstance] printSettings:eventText.text ];
         NSLog(@"the text from addVC is %@", eventText.text);
         
+        //dismiss view
         [self dismissViewControllerAnimated:YES completion:nil];
     }
     

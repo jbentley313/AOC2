@@ -22,10 +22,7 @@
 - (void)viewDidLoad
 {
     [textDateManager CreateInstance];
-    [[textDateManager GetInstance]passedText];
 
-    
-    [textViewDisplay setText:[[textDateManager GetInstance] passedText]];
     
     
     [super viewDidLoad];
@@ -36,13 +33,19 @@
 
 -(void)viewWillAppear:(BOOL)animated;
 {
+    //swipe right instantiation
     rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
     rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
+    //add gesture recog to rightSwiper label
     [swipeRightLabel addGestureRecognizer:rightSwiper];
+    
     [super viewWillAppear:animated];
     
+    //data passed from Singleton textDateManager
     NSString *textFromSingleton = [[textDateManager GetInstance] passedText];
-    textViewDisplay.text = [textViewDisplay.text stringByAppendingFormat:@"\n%@", textFromSingleton];
+    if (textFromSingleton != nil) {
+        textViewDisplay.text = [textViewDisplay.text stringByAppendingFormat:@"\n%@", textFromSingleton];
+    }
 }
 
 
@@ -52,11 +55,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+//right swipe
 -(void)onSwipe:(UISwipeGestureRecognizer*)recognizer
 {
     if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
         AddEventViewController *viewcontroller =[[AddEventViewController alloc]initWithNibName:@"addEventView" bundle:nil];
         if (viewcontroller != nil) {
+            //present addEventViewController
             [self presentViewController:viewcontroller animated:YES completion:nil];
         }
     }
@@ -66,18 +71,20 @@
     
 }
 
--(void)setdText
-{
-    [textViewDisplay setText:[[textDateManager GetInstance] passedText]];
-    NSString *this = [[textDateManager GetInstance] passedText];
-    [textViewDisplay setText:this];
-}
+//-(void)setdText
+//{
+//    [textViewDisplay setText:[[textDateManager GetInstance] passedText]];
+//    NSString *this = [[textDateManager GetInstance] passedText];
+//    [textViewDisplay setText:this];
+//}
 
 
+//button actions
 -(IBAction)onClick:(id)sender
 {
     UIButton *button = (UIButton*)sender;
     if (button != nil) {
+        //save button
         if (button.tag == 0) {
 //            NSString *this = [[textDateManager GetInstance] passedText];
 //            [textViewDisplay setText:this];
