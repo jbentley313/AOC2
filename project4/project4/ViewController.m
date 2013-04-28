@@ -40,6 +40,9 @@
     rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
     [swipeRightLabel addGestureRecognizer:rightSwiper];
     [super viewWillAppear:animated];
+    
+    NSString *this = [[textDateManager GetInstance] passedText];
+    [textViewDisplay setText:this];
 }
 
 
