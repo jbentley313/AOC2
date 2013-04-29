@@ -107,7 +107,7 @@
                 //dismiss view
                 [self dismissViewControllerAnimated:YES completion:nil];
                 
-            //use picked date
+                //use picked date
             } else if (dateString != nil) {
                 [[textDateManager GetInstance] dateSettings:dateString];
                 [self dismissViewControllerAnimated:YES completion:nil];
