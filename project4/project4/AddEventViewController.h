@@ -23,7 +23,7 @@
 
 
 
-@property (strong) NSString *passedText;
+//@property (strong) NSString *passedText;
 @property (retain, nonatomic)  NSString *dateString;
 
 -(void)DisplayAlertWithString:(NSString*)alert;

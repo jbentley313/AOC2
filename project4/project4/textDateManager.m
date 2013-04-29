@@ -29,7 +29,7 @@ static textDateManager *_instance = nil;
         return _instance;
     }
     return nil;
-}
+} 
 
 +(id)alloc
 {
@@ -38,18 +38,24 @@ static textDateManager *_instance = nil;
     
 }
 
--(NSString*)printSettings:(NSString*)passedString;
+-(void)printSettings:(NSString*)passedString;
 {
     
     NSLog(@"from singleton %@", passedString);
-    [self setPassedText:passedString];
-    return passedText;
+    if (passedString != nil) {
+        [self setPassedText:passedString];
+    }
+
+    
 }
 
--(NSString*)dateSettings:(NSString*)passedDateString;
+-(void)dateSettings:(NSString*)passedDateString;
 {
-    [self setPassedDate:passedDateString];
-    return passedDate;
+    if (passedDateString != nil) {
+        [self setPassedDate:passedDateString];
+    }
+
+    
 }
 
 @end

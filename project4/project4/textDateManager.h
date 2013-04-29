@@ -10,13 +10,13 @@
 #import "textDateManager.h"
 @interface textDateManager : NSObject
 {
-//    NSString *sharedText;
+
 }
 
 +(void)CreateInstance;
 +(textDateManager*)GetInstance;
--(NSString*)printSettings:(NSString*)passedString;
--(NSString*)dateSettings:(NSString*)passedDateString;
+-(void)printSettings:(NSString*)passedString;
+-(void)dateSettings:(NSString*)passedDateString;
 
 @property (nonatomic, strong) NSString *passedText;
 @property (nonatomic, strong) NSString *passedDate;

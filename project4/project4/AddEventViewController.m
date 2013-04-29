@@ -15,7 +15,6 @@
 @end
 
 @implementation AddEventViewController
-@synthesize passedText;
 @synthesize dateString;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -84,8 +83,8 @@
 //swipe left
 -(void)onSwipe:(UISwipeGestureRecognizer*)recognizer
 {
+    //get data from singleton
     if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
-        //get data from singleton
         if (eventText.text.length < 1) {
             //alert string if empty
             NSString *message = @"please enter a name for the event";
@@ -94,27 +93,24 @@
             //call singleton with eventText and dateString
             [[textDateManager GetInstance] printSettings:eventText.text ];
             
-            //use today's date if none picked
+            //use today's date if no date picked
             if (dateString == nil) {
                 formattedDate = [[NSDateFormatter alloc] init];
                 [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
                 NSString *todaysDate = [formattedDate stringFromDate:[NSDate date]];
                 [self setDateString:todaysDate];
                 [[textDateManager GetInstance] dateSettings:dateString];
-                //                [delegate didClose:@"\n"];
                 
+                //dismiss view
+                [self dismissViewControllerAnimated:YES completion:nil];
                 
-                
-                //use picked date
+            //use picked date
             } else if (dateString != nil) {
                 [[textDateManager GetInstance] dateSettings:dateString];
-                //                [delegate didClose:@"\n"];
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
-            NSLog(@"the text from addVC is %@", eventText.text);
+
             
-            //dismiss view
-            [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
 }

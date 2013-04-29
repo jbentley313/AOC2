@@ -33,20 +33,31 @@
 
 -(void)viewWillAppear:(BOOL)animated;
 {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (defaults !=nil) {
+        NSString *allEvents = [defaults objectForKey:@"allEvents"];
+        
+        textViewDisplay.text = allEvents;
+         NSLog(@"%@", defaults);
+    }
+    
+    
     //swipe right instantiation
     rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
     rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
     //add gesture recog to rightSwiper label
     [swipeRightLabel addGestureRecognizer:rightSwiper];
     
-    [super viewWillAppear:animated];
+    
     
     //data passed from Singleton textDateManager
+    
     NSString *textFromSingleton = [[textDateManager GetInstance] passedText];
     NSString *dateFromSingleton = [[textDateManager GetInstance] passedDate];
     if (textFromSingleton != nil) {
         textViewDisplay.text = [textViewDisplay.text stringByAppendingFormat:@"\n%@\n%@\n", textFromSingleton, dateFromSingleton];
     }
+    [super viewWillAppear:animated];
 }
 
 
@@ -72,12 +83,11 @@
     
 }
 
-//-(void)setdText
-//{
-//    [textViewDisplay setText:[[textDateManager GetInstance] passedText]];
-//    NSString *this = [[textDateManager GetInstance] passedText];
-//    [textViewDisplay setText:this];
-//}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
 
 
 //button actions
@@ -87,7 +97,14 @@
     if (button != nil) {
         //save button
         if (button.tag == 0) {
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            NSUserDefaults *defaultSet = [NSUserDefaults standardUserDefaults];
+            if (defaultSet !=nil) {
+                NSString *allEventsDisplay = textViewDisplay.text;
+                [defaultSet setObject:allEventsDisplay forKey:@"allEvents"];
+                
+                //save data
+                [defaultSet synchronize];
+            }
         }
     }
     
