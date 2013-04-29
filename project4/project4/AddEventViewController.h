@@ -8,19 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "textDateManager.h"
+#import "ViewController.h"
 
-@interface AddEventViewController : UIViewController
+@interface AddEventViewController : UIViewController <UITextFieldDelegate>
 {
     UISwipeGestureRecognizer *leftSwiper;
     IBOutlet UILabel *swipeLeftLabel;
     IBOutlet UITextField *eventText;
     NSDateFormatter *formattedDate;
+    IBOutlet UIButton *closeKeyboardBtn;
 }
 
 -(IBAction)onChange:(id)sender;
 
 -(IBAction)onClick:(id)sender;
-
 
 
 //@property (strong) NSString *passedText;

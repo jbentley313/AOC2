@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AddEventViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController 
 {
     IBOutlet UIButton *saveBtn;
     IBOutlet UILabel *swipeRightLabel;

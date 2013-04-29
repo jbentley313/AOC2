@@ -8,7 +8,7 @@
 
 #import "AddEventViewController.h"
 #import "textDateManager.h"
-#import "ViewController.h"
+
 
 @interface AddEventViewController ()
 
@@ -16,6 +16,7 @@
 
 @implementation AddEventViewController
 @synthesize dateString;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -70,8 +71,8 @@
     if (datePicked !=nil) {
         //set min date to today
         [datePicked setMinimumDate:[NSDate date]];
-        
         NSDate *dateNS = datePicked.date;
+        
         //format dateString2
         NSString *dateString2 = [formattedDate stringFromDate:dateNS];
         if (dateString2 != nil) {
@@ -86,11 +87,13 @@
     //get data from singleton
     if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
         if (eventText.text.length < 1) {
+            
             //alert string if empty
             NSString *message = @"please enter a name for the event";
             [self DisplayAlertWithString:message];
-        } else if (eventText.text.length > 0) {
+            
             //call singleton with eventText and dateString
+        } else if (eventText.text.length > 0) {
             [[textDateManager GetInstance] printSettings:eventText.text ];
             
             //use today's date if no date picked
@@ -109,8 +112,6 @@
                 [[textDateManager GetInstance] dateSettings:dateString];
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
-
-            
         }
     }
 }
@@ -125,6 +126,18 @@
     }
 }
 
+
+//show keyboard when editing
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    closeKeyboardBtn.hidden = NO;
+}
+
+//hide keyboard when done editing
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    closeKeyboardBtn.hidden = YES;
+}
 
 
 - (void)didReceiveMemoryWarning
