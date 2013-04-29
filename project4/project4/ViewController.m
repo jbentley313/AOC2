@@ -21,9 +21,8 @@
 
 - (void)viewDidLoad
 {
+    //instantiate singleton 
     [textDateManager CreateInstance];
-    
-    
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -33,14 +32,19 @@
 
 -(void)viewWillAppear:(BOOL)animated;
 {
+    //display saved user defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSObject *defaultObjects = [defaults objectForKey:@"allEvents"];
     if (defaults !=nil) {
-        NSString *allEvents = [defaults objectForKey:@"allEvents"];
         
-        textViewDisplay.text = allEvents;
-         NSLog(@"%@", defaults);
+        // display if defaults have been saved 
+        if (defaultObjects != nil) {
+            NSString *allEvents = [defaults objectForKey:@"allEvents"];
+            
+            //set textview to display all events
+            textViewDisplay.text = allEvents;
+        }
     }
-    
     
     //swipe right instantiation
     rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
@@ -48,10 +52,7 @@
     //add gesture recog to rightSwiper label
     [swipeRightLabel addGestureRecognizer:rightSwiper];
     
-    
-    
     //data passed from Singleton textDateManager
-    
     NSString *textFromSingleton = [[textDateManager GetInstance] passedText];
     NSString *dateFromSingleton = [[textDateManager GetInstance] passedDate];
     if (textFromSingleton != nil) {
@@ -80,7 +81,6 @@
     else {
         
     }
-    
 }
 
 
@@ -107,6 +107,5 @@
             }
         }
     }
-    
 }
 @end
