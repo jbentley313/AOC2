@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  project4
 //
-//  Created by theOwner on 4/26/13.
+//  Created by Jason Bentley on 4/26/13.
 //  Copyright (c) 2013 theOwner. All rights reserved.
 //
 

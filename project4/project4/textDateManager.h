@@ -2,7 +2,7 @@
 //  textDateManager.h
 //  project4
 //
-//  Created by theOwner on 4/27/13.
+//  Created by Jason Bentley on 4/27/13.
 //  Copyright (c) 2013 theOwner. All rights reserved.
 //
 
