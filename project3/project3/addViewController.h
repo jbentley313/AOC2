@@ -22,7 +22,7 @@
     IBOutlet UIButton *closeKeyBtn;
     IBOutlet UIButton *cancelBtn;
     NSDateFormatter *formattedDate;
-    
+    UIDatePicker *datePicked;
     
         id<addViewDelegate> delegate;
 }

@@ -17,6 +17,7 @@
     IBOutlet UITextField *eventText;
     NSDateFormatter *formattedDate;
     IBOutlet UIButton *closeKeyboardBtn;
+    IBOutlet UIDatePicker *datePicked;
 }
 
 -(IBAction)onChange:(id)sender;
@@ -28,5 +29,7 @@
 @property (retain, nonatomic)  NSString *dateString;
 
 -(void)DisplayAlertWithString:(NSString*)alert;
+
+
 
 @end

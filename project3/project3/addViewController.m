@@ -29,7 +29,7 @@
 
 - (void)viewDidLoad
 {
-    
+//    [datePicked setMinimumDate:[NSDate date]];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -93,7 +93,7 @@
     formattedDate = [[NSDateFormatter alloc] init];
     [formattedDate setDateFormat:@"MMM dd, yyyy 'at' hh:mm a"];
     
-    UIDatePicker *datePicked = (UIDatePicker*)sender;
+    datePicked = (UIDatePicker*)sender;
     if (datePicked !=nil) {
         //set min date to today
         [datePicked setMinimumDate:[NSDate date]];
